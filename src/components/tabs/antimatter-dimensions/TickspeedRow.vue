@@ -91,7 +91,7 @@ export default {
           Tickspeed Unpurchasable (EC 9)
         </span>
         <span v-else>
-          Tickspeed Cost: {{ format(cost) }}
+          틱스피드 가격: {{ format(cost) }}
         </span>
         <div
           v-if="hasTutorial"
@@ -104,7 +104,7 @@ export default {
         :class="{ 'o-primary-btn--disabled': !isAffordable && !isContinuumActive }"
         onclick="buyMaxTickSpeed()"
       >
-        Buy Max
+        전체 구매
       </button>
     </div>
     <div

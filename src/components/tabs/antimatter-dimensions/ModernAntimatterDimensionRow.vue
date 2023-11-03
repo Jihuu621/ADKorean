@@ -37,7 +37,7 @@ export default {
   computed: {
     isDoomed: () => Pelle.isDoomed,
     name() {
-      return `${AntimatterDimension(this.tier).shortDisplayName} Antimatter Dimension`;
+      return `제${this.tier} 반물질 차원`;
     },
     costDisplay() {
       return this.buyUntil10 ? format(this.until10Cost) : format(this.singleCost);
@@ -51,22 +51,22 @@ export default {
     boughtTooltip() {
       if (this.isCapped) return `Nameless prevents the purchase of more than ${format(1)} 8th Antimatter Dimension`;
       if (this.isContinuumActive) return "Continuum produces all your Antimatter Dimensions";
-      return `Purchased ${quantifyInt("time", this.bought)}`;
+      return `${this.bought}번 구매함`;
     },
     costUnit() {
       return `${AntimatterDimension(this.tier - 2).shortDisplayName} AD`;
     },
     buttonPrefix() {
-      if (!this.isUnlocked) return "Locked";
+      if (!this.isUnlocked) return "잠김";
       if (this.isCapped) return "Shattered by Nameless";
-      if (this.isContinuumActive) return "Continuum: ";
-      return `Buy ${formatInt(this.howManyCanBuy)}`;
+      if (this.isContinuumActive) return "연속체: ";
+      return `${formatInt(this.howManyCanBuy)}개 구매`;
     },
     buttonValue() {
       if (this.isCapped) return "";
       if (this.isContinuumActive) return this.continuumString;
-      const prefix = this.showCostTitle(this.buyUntil10 ? this.until10Cost : this.singleCost) ? "Cost: " : "";
-      const suffix = this.isCostsAD ? this.costUnit : "AM";
+      const prefix = this.showCostTitle(this.buyUntil10 ? this.until10Cost : this.singleCost) ? "가격: " : "";
+      const suffix = this.isCostsAD ? this.costUnit : "반물질";
       return `${prefix}${this.costDisplay} ${suffix}`;
     },
     hasLongText() {

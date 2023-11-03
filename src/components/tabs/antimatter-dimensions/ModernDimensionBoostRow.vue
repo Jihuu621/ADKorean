@@ -20,7 +20,7 @@ export default {
   computed: {
     isDoomed: () => Pelle.isDoomed,
     dimName() {
-      return AntimatterDimension(this.requirement.tier).shortDisplayName;
+      return this.requirement.tier;
     },
     boostCountText() {
       if (this.requirementText) return this.requirementText;
@@ -67,8 +67,8 @@ export default {
 
 <template>
   <div class="reset-container dimboost">
-    <h4>Dimension Boost ({{ boostCountText }})</h4>
-    <span>Requires: {{ formatInt(requirement.amount) }} {{ dimName }} Antimatter D</span>
+    <h4>차원 가속 ({{ boostCountText }})</h4>
+    <span>조건: 제{{ dimName }} 반물질 차원 {{ formatInt(requirement.amount) }}개</span>
     <button
       :class="classObject"
       @click.exact="dimensionBoost(true)"

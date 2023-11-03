@@ -210,8 +210,8 @@ window.quantifyInt = function quantifyInt(name, value) {
 window.makeEnumeration = function makeEnumeration(items) {
   if (items.length === 0) return "";
   if (items.length === 1) return items[0];
-  if (items.length === 2) return `${items[0]} and ${items[1]}`;
+  if (items.length === 2) return `${items[0]} 그리고 ${items[1]}`;
   const commaSeparated = items.slice(0, items.length - 1).join(", ");
   const last = items[items.length - 1];
-  return `${commaSeparated}, and ${last}`;
+  return `${commaSeparated}, 그리고 ${last}`;
 };
