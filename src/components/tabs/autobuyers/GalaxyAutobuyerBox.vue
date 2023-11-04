@@ -50,7 +50,7 @@ export default {
   <AutobuyerBox
     :autobuyer="autobuyer"
     :is-modal="isModal"
-    name="Automatic Antimatter Galaxies"
+    name="반물질 은하 자동구매기"
     :show-interval="!isBuyMaxUnlocked"
   >
     <template
@@ -64,7 +64,7 @@ export default {
       #intervalSlot
     >
       <div class="c-autobuyer-box__small-text">
-        Activates every X seconds:
+        X초마다 작동:
       </div>
       <AutobuyerInput
         :autobuyer="autobuyer"
@@ -81,7 +81,7 @@ export default {
           type="checkbox"
           class="o-clickable"
         >
-        Limit Antimatter Galaxies to:
+        반물질 은하 제한:
       </label>
       <AutobuyerInput
         :autobuyer="autobuyer"

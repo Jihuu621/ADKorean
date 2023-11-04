@@ -53,7 +53,7 @@ export default {
     :autobuyer="autobuyer"
     :is-modal="isModal"
     :show-interval="!isBuyMaxUnlocked"
-    name="Automatic Dimension Boosts"
+    name="차원 가속 자동구매기"
   >
     <template
       v-if="!hasMaxedInterval"
@@ -69,7 +69,7 @@ export default {
         class="c-autobuyer-box__small-text"
       >
         <br>
-        Activates every X seconds:
+        X초마다 작동:
       </div>
       <AutobuyerInput
         :autobuyer="autobuyer"
@@ -89,7 +89,7 @@ export default {
           type="checkbox"
           class="o-clickable"
         >
-        Limit Dimension Boosts to:
+        차원 가속 제한:
       </label>
       <AutobuyerInput
         :autobuyer="autobuyer"
@@ -107,12 +107,12 @@ export default {
           class="o-clickable"
         >
         <span v-if="isBuyMaxUnlocked">
-          Only Dimboost to unlock new<br>
-          Dimensions until X Galaxies:
+          반물질 은하 X개 도달 전까지 <br>
+          차원 가속 최대치를 4개로 제한:
         </span>
         <span v-else>
-          Galaxies required to always<br>
-          Dimboost, ignoring the limit:
+          반물질 은하 X개 도달 시<br>
+          차원 가속 최대 구매 갯수를 돌파:
         </span>
       </label>
       <AutobuyerInput

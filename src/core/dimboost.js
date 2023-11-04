@@ -137,7 +137,7 @@ export class DimBoost {
 
     const formattedMultText = `${formatX(DimBoost.power, 2, 1)}`;
     let dimensionRange = `제1 반물질 차원 `;
-    if (boosts > 0) dimensionRange = `제 1-${Math.min(boosts + 1, 8)} `;
+    if (boosts > 0) dimensionRange = `제 1-${Math.min(boosts + 1, 8)}반물질 차원`;
     if (boosts >= DimBoost.maxDimensionsUnlockable - 1) dimensionRange = `모든 차원`;
 
     let boostEffects;

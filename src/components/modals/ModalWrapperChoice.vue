@@ -99,7 +99,7 @@ export default {
         @click="doCancel"
       >
         <slot name="cancel-text">
-          Cancel
+          취소
         </slot>
       </PrimaryButton>
 
@@ -111,7 +111,7 @@ export default {
         @click="doConfirm"
       >
         <slot name="confirm-text">
-          Confirm
+          확인
         </slot>
       </PrimaryButton>
     </div>

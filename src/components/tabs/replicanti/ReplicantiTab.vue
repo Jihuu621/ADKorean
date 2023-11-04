@@ -48,8 +48,8 @@ export default {
     replicantiChanceSetup() {
       return new ReplicantiUpgradeButtonSetup(
         ReplicantiUpgrade.chance,
-        value => `Replicate chance: ${formatPercents(value)}`,
-        cost => `+${formatPercents(0.01)} Costs: ${format(cost)} IP`
+        value => `복제 확률: ${formatPercents(value)}`,
+        cost => `+${formatPercents(0.01)} 가격: ${format(cost)} 무한 포인트`
       );
     },
     replicantiIntervalSetup() {
@@ -72,9 +72,9 @@ export default {
       }
       return new ReplicantiUpgradeButtonSetup(
         upgrade,
-        value => `Interval: ${formatInterval(value)}`,
+        value => `복제 간격: ${formatInterval(value)}`,
         cost =>
-          `➜ ${formatInterval(upgrade.nextValue)} Costs: ${format(cost)} IP`
+          `➜ ${formatInterval(upgrade.nextValue)} 가격: ${format(cost)} 무한 포인트`
       );
     },
     maxGalaxySetup() {
@@ -82,7 +82,7 @@ export default {
       return new ReplicantiUpgradeButtonSetup(
         upgrade,
         value => {
-          let description = `Max Replicanti Galaxies: `;
+          let description = `최대 복제자 은하: `;
           const extra = upgrade.extra;
           if (extra > 0) {
             const total = value + extra;
@@ -92,7 +92,7 @@ export default {
           }
           return description;
         },
-        cost => `+${formatInt(1)} Costs: ${format(cost)} IP`
+        cost => `+${formatInt(1)} 가격: ${format(cost)} 무한 포인트`
       );
     },
     boostText() {

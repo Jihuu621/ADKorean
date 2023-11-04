@@ -109,7 +109,7 @@ export default {
       :class="purchaseButtonObject()"
       @click="performPurchase"
     >
-      Cost: {{ cost }}
+      가격: {{ cost }}
       <img
         src="images/std_coin.png"
         class="o-shop-button-button__img"

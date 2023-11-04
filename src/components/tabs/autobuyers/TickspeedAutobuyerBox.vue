@@ -18,8 +18,8 @@ export default {
     autobuyer: () => Autobuyer.tickspeed,
     modeDisplay() {
       switch (this.mode) {
-        case AUTOBUYER_MODE.BUY_SINGLE: return "Buys singles";
-        case AUTOBUYER_MODE.BUY_MAX: return "Buys max";
+        case AUTOBUYER_MODE.BUY_SINGLE: return "1개씩 구매";
+        case AUTOBUYER_MODE.BUY_MAX: return "최대 구매";
       }
       throw "Unknown tickspeed autobuyer mode";
     }
@@ -40,7 +40,7 @@ export default {
 <template>
   <AutobuyerBox
     :autobuyer="autobuyer"
-    name="Tickspeed Autobuyer"
+    name="틱스피드 자동구매기"
     show-interval
   >
     <template #intervalSlot>
@@ -58,7 +58,7 @@ export default {
         v-else
         class="o-autobuyer-btn o-autobuyer-btn--unavailable"
       >
-        Complete the challenge to change mode
+        도전을 완료하여 모드 바꾸기
       </button>
     </template>
   </AutobuyerBox>

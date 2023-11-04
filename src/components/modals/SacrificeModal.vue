@@ -15,16 +15,14 @@ export default {
   computed: {
     message() {
       if (Achievement(118).isUnlocked && !Pelle.isDoomed) {
-        return `Dimensional Sacrifice will give you a boost to the 8th Antimatter Dimension based on the amount of
-          1st Antimatter Dimensions you had at the time of Sacrificing.`;
+        return `차원 희생은 현재 가지고 있는 제1 반물질 차원에 비례하여 제8 반물질 차원에 배율을 줍니다.`;
       }
-      return `Dimensional Sacrifice will remove all of your 1st through 7th Antimatter Dimensions
-        (with the cost and multiplier unchanged), for a boost to the 8th Antimatter Dimension based on the total
-        amount of 1st Antimatter Dimensions sacrificed. It will take time to regain production.`;
+      return `차원 희생은 제1-7 반물질 차원을 모두 제거합니다. 
+      제1 반물질 차원에 비례하여 8번째 반물질 차원에 배율이 부여되며, 
+      생산량을 회복하는 데 시간이 일부 걸릴 수 있습니다.`;
     },
     multiplierText() {
-      return `Multiplier is currently ${formatX(this.currentMultiplier, 2, 2)} and will increase to
-        ${formatX(this.nextMultiplier, 2, 2)} on Dimensional Sacrifice.`;
+      return `현재 배율은 ${formatX(this.currentMultiplier, 2, 2)}이며 차원 희생 이후에는 ${formatX(this.nextMultiplier, 2, 2)}가 될 것입니다.`;
     },
   },
   methods: {
@@ -45,7 +43,7 @@ export default {
     @confirm="handleYesClick"
   >
     <template #header>
-      Dimensional Sacrifice
+      차원 희생
     </template>
     <div class="c-modal-message__text">
       {{ message }}

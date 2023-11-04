@@ -26,10 +26,14 @@ export default {
   },
   computed: {
     name() {
-      return this.autobuyer.name;
+      if (this.autobuyer.name == "Dimensional Sacrifice") {return "차원 희생";}
+      else if (this.autobuyer.name == "Replicanti Galaxy") {return "복제자 은하";}
+      else if (this.autobuyer.name == "Time Theorem") {return "시간 정리";}
+      else if (this.autobuyer.name == "Infinity Point Multiplier") {return "무한 포인트 배율";}
+      else if (this.autobuyer.name == "Eternity Point Multiplier") {return "영원 포인트 배율";}
     },
     isSacrifice() {
-      return this.name === "Dimensional Sacrifice";
+      return this.name === "Dimensioanl Sacrifice";
     }
   },
   methods: {
@@ -55,13 +59,13 @@ export default {
         v-if="isHiddenSacrifice"
         class="c-autobuyer-box__small-text"
       >
-        Automatic (Achievement 118)
+        자동 (도전과제 118)
       </b>
       <span
         v-else-if="autobuyer.hasInput"
         class="c-autobuyer-box__small-text"
       >
-        Multiplier:
+        배율:
         <AutobuyerInput
           class="c-small-autobuyer-input"
           :autobuyer="autobuyer"

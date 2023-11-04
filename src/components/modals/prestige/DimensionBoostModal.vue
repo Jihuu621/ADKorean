@@ -14,16 +14,15 @@ export default {
   },
   computed: {
     topLabel() {
-      return `You are about to do a Dimension Boost Reset`;
+      return `당신은 차원을 가속하려 합니다`;
     },
     message() {
       const keepDimensions = Perk.antimatterNoReset.canBeApplied || Achievement(111).canBeApplied ||
         PelleUpgrade.dimBoostResetsNothing.isBought
-        ? `not actually reset anything due to an upgrade you have which prevents Antimatter and Antimatter Dimensions
-          from being reset in this situation. You will still gain the multiplier from the Boost, as usual.`
-        : `reset your Antimatter and Antimatter Dimensions. Are you sure you want to do this?`;
+        ? `반물질 및 반물질 차원 초기화를 방지하는 업그레이드로 인해 아무것도 초기화되지 않습니다. 평소와 같이 차원 가속을 통해 배율을 얻을 수 있습니다.`
+        : `이는 당신의 반물질과 반물질 차원을 전부 초기화합니다. 계속하시겠습니까?`;
 
-      return `This will ${keepDimensions}`;
+      return `${keepDimensions}`;
     },
   },
   methods: {

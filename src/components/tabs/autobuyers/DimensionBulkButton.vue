@@ -21,10 +21,10 @@ export default {
   computed: {
     bulkDisplay() {
       if (this.hasMaxedBulk) {
-        return `${formatX(this.bulk, 2, 0)} bulk buy (capped)`;
+        return `${formatX(this.bulk, 2, 0)} 대량 구매 (최대)`;
       }
       const newBulk = Math.min(this.bulk * 2, this.autobuyer.bulkCap);
-      return `${formatX(this.bulk, 2, 0)} ➜ ${formatX(newBulk, 2, 0)} bulk buy`;
+      return `${formatX(this.bulk, 2, 0)} ➜ ${formatX(newBulk, 2, 0)} 대량 구매`;
     },
     classObject() {
       return {
@@ -61,14 +61,14 @@ export default {
     <span>{{ bulkDisplay }}</span>
     <template v-if="!hasMaxedBulk">
       <br>
-      <span>Cost: {{ format(cost, 2, 0) }} IP</span>
+      <span>가격: {{ format(cost, 2, 0) }} 무한 포인트</span>
     </template>
   </button>
   <button
     v-else-if="hasMaxedInterval && !bulkUnlimited"
     class="o-autobuyer-btn l-autobuyer-box__button o-autobuyer-btn--unavailable"
   >
-    Complete the challenge to upgrade bulk
+    도전을 완료하여 대량 구매 해금
   </button>
 </template>
 

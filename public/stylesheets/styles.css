@@ -4198,7 +4198,7 @@ br {
 .o-autobuyer-btn {
   width: 17.5rem;
   height: 3.5rem;
-  font-family: Typewriter;
+  font-family: 맑은 고딕;
   font-size: 0.9rem;
   font-weight: bold;
   color: var(--color-text);
@@ -5175,7 +5175,7 @@ properly on certain themes. */
 
 .c-modal {
   text-align: center;
-  font-family: Typewriter, serif;
+  font-family: 맑은 고딕, serif;
   font-size: 1.4rem;
   color: var(--color-text);
   background-color: var(--color-base);

@@ -68,7 +68,7 @@ export default {
       <PrimaryButton
         @click="emitClose"
       >
-        Confirm
+        확인
       </PrimaryButton>
     </div>
   </div>

@@ -31,7 +31,15 @@ export default {
       return this.type.zeroIndexed;
     },
     name() {
-      return this.type.groupName;
+      if (this.type.groupName == "Antimatter Dimension") {return "반물질 차원";}
+      else if (this.type.groupName == "Infinity Dimension") {return "무한 차원";}
+      else if (this.type.groupName == "Time Dimension") {return "시간 차원";}
+      else if (this.type.groupName == "Antimatter Dimension") {return "반물질 차원";}
+      else if (this.type.groupName == "Replicanti Upgrade") {return "복제자 업그레이드";}
+      else if (this.type.groupName == "Dilation Upgrade") {return "시간 팽창 업그레이드";}
+      else if (this.type.groupName == "Black Hole Power") {return "블랙홀 업그레이드";}
+      else if (this.type.groupName == "Reality Upgrade") {return "현실 업그레이드";}
+      else {return this.type.groupName;}
     },
     entryCount() {
       return this.type.entryCount;
@@ -81,7 +89,7 @@ export default {
       @click="toggleGroup"
     />
     <div class="l-autobuyer-box__title">
-      {{ name }}<br>Autobuyers
+      {{ name }}<br>자동구매기
       <!-- If we're showing as a group, then all attributes are the same and we can arbitrarily take the first one -->
       <AutobuyerIntervalLabel
         v-if="displayLabelAsGroup"

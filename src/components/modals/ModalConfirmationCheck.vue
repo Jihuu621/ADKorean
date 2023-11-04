@@ -23,7 +23,7 @@ export default {
       };
     },
     tooltipText() {
-      return `${this.setting ? "Disable" : "Reenable"} the ${this.confirmation.name} confirmation`;
+      return `${this.confirmation.name} 확인 탭 ${this.setting ? "비활성화" : "활성화"}`;
     },
   },
   created() {
@@ -53,7 +53,7 @@ export default {
       </div>
     </div>
     <span class="c-modal__confirmation-toggle__text">
-      Don't show this message again
+      이 메시지를 다시 표시하지 않습니다.
     </span>
   </div>
 </template>

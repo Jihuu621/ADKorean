@@ -1,86 +1,86 @@
 export const confirmationTypes = [
   {
-    name: "Dimension Boost",
+    name: "차원 가속",
     option: "dimensionBoost",
     isUnlocked: () => PlayerProgress.infinityUnlocked() || player.galaxies > 0 || player.dimensionBoosts > 0,
   }, {
-    name: "Antimatter Galaxy",
+    name: "반물질 은하",
     option: "antimatterGalaxy",
     isUnlocked: () => PlayerProgress.infinityUnlocked() || player.galaxies > 0,
   }, {
-    name: "Sacrifice",
+    name: "차원 희생",
     option: "sacrifice",
     isUnlocked: () => Sacrifice.isVisible,
   }, {
-    name: "Big Crunch",
+    name: "빅 크런치",
     option: "bigCrunch",
     isUnlocked: () => player.break || PlayerProgress.eternityUnlocked(),
   }, {
-    name: "Challenges",
+    name: "도전",
     option: "challenges",
     isUnlocked: () => PlayerProgress.infinityUnlocked(),
   }, {
-    name: "Exit Challenges",
+    name: "도전 나가기",
     option: "exitChallenge",
     isUnlocked: () => PlayerProgress.infinityUnlocked(),
   }, {
-    name: "Replicanti Galaxy",
+    name: "복제자 은하",
     option: "replicantiGalaxy",
     isUnlocked: () => PlayerProgress.eternityUnlocked() || player.replicanti.unl,
   }, {
-    name: "Eternity",
+    name: "영원",
     option: "eternity",
     isUnlocked: () => PlayerProgress.eternityUnlocked(),
   }, {
-    name: "Dilation",
+    name: "시간 팽창",
     option: "dilation",
     isUnlocked: () => PlayerProgress.realityUnlocked() || !Currency.tachyonParticles.eq(0),
   }, {
-    name: "Reset Reality",
+    name: "현실 리셋",
     option: "resetReality",
     isUnlocked: () => PlayerProgress.realityUnlocked(),
   }, {
-    name: "Glyph Replace",
+    name: "글리프 교체",
     option: "glyphReplace",
     isUnlocked: () => PlayerProgress.realityUnlocked(),
   }, {
-    name: "Glyph Sacrifice",
+    name: "글리프 희생",
     option: "glyphSacrifice",
     isUnlocked: () => GlyphSacrificeHandler.canSacrifice,
   }, {
-    name: "Glyph Purge",
+    name: "글리프 정리",
     option: "autoClean",
     isUnlocked: () => GlyphSacrificeHandler.canSacrifice,
   }, {
-    name: "Sacrifice All Glyphs",
+    name: "모든 글리프 희생",
     option: "sacrificeAll",
     isUnlocked: () => GlyphSacrificeHandler.canSacrifice,
   }, {
-    name: "Glyph Selection",
+    name: "글리프 선택",
     option: "glyphSelection",
     isUnlocked: () => Autobuyer.reality.isUnlocked,
   }, {
-    name: "Glyph Undo",
+    name: "글리프 실행 취소",
     option: "glyphUndo",
     isUnlocked: () => TeresaUnlocks.undo.canBeApplied,
   }, {
-    name: "Switch Automator Editor",
+    name: "오토메이터 에디터 변경",
     option: "switchAutomatorMode",
     isUnlocked: () => Player.automatorUnlocked,
   }, {
-    name: "Delete Glyph Preset",
+    name: "글리프 프리셋 변경",
     option: "deleteGlyphSetSave",
     isUnlocked: () => EffarigUnlock.setSaves.isUnlocked,
   }, {
-    name: "Glyph Refine",
+    name: "글리프 수정",
     option: "glyphRefine",
     isUnlocked: () => Ra.unlocks.unlockGlyphAlchemy.canBeApplied,
   }, {
-    name: "Armageddon",
+    name: "아마겟돈",
     option: "armageddon",
     isUnlocked: () => Pelle.isDoomed,
   }, {
-    name: "Respec Shop Purchases",
+    name: "상점 구매 환원하기",
     option: "respecIAP",
     isUnlocked: () => Cloud.isAvailable
   }
