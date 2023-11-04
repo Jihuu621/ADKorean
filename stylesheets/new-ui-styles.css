@@ -246,6 +246,7 @@ body.t-s12 {
 }
 
 .o-tab-btn--subtab .o-tab-btn--cel3 {
+  font-family: Typewriter;
   font-weight: normal;
   transform: rotate(45deg);
 }
