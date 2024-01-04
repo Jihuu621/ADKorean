@@ -44,15 +44,15 @@ export default {
     :class="classObject"
     @click="upgradeInterval"
   >
-    {{ formatPercents(0.4) }} smaller interval
+    {{ formatPercents(0.4) }} 구매 간격 줄이기
     <br>
-    Cost: {{ format(cost, 2) }} IP
+    가격: {{ format(cost, 2) }} 무한 포인트
   </button>
   <button
     v-else-if="!isMaxed"
     class="o-autobuyer-btn l-autobuyer-box__button o-autobuyer-btn--unavailable"
   >
-    Complete the challenge to upgrade interval
+    도전을 완료하여 구매 간격 업그레이드하기
   </button>
 </template>
 

@@ -14,6 +14,6 @@ export default {
     class="c-options-tab__hotkeys-link"
     @click="handleClick"
   >
-    Press <kbd>?</kbd> to open the hotkey list.
+    <kbd>?</kbd> 키를 눌러 단축키 리스트 열기
   </p>
 </template>

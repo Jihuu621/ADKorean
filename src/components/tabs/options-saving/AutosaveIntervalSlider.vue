@@ -51,7 +51,7 @@ export default {
 
 <template>
   <div class="o-primary-btn o-primary-btn--option o-primary-btn--slider l-options-grid__button">
-    <b>Autosave interval: {{ formatInt(sliderInterval) }}s</b>
+    <b>자동 저장 간격: {{ formatInt(sliderInterval) }}s</b>
     <SliderComponent
       class="o-primary-btn--slider__slider"
       v-bind="sliderProps"

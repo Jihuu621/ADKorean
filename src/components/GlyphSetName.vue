@@ -42,6 +42,10 @@ const GLYPH_NAMES = {
     adjective: { high: "Dilated", mid: "Attenuated", low: "Diluted" },
     noun: "Dilation"
   },
+  universe: {
+    adjective: { high: "Multiversal", mid: "Universal", low: "Inner-Space" },
+    noun: "Universe"
+  },
 };
 
 export default {
@@ -72,6 +76,7 @@ export default {
         { type: "reality", perc: 0, adjOrder: 4 },
         { type: "companion", perc: 0, adjOrder: 5 },
         { type: "cursed", perc: 0, adjOrder: 6 },
+        { type: "universe", perc: 0, adjOrder: 7 },
       ],
       sortedGlyphs: [],
       slotCount: 0
@@ -147,7 +152,7 @@ export default {
     // Check for single-type sets and give them a special name based on how much of the full equipped slots they take up
     singletonName() {
       if (this.sortedGlyphs[0].type === "effarig") return GLYPH_NAMES.effarig.noun[this.getEffarigProp()];
-      const singleGlyphTypes = ["reality", "companion"];
+      const singleGlyphTypes = ["reality", "companion", "universe"];
       for (const key of singleGlyphTypes) {
         if (this.sortedGlyphs[0].type === key) return GLYPH_NAMES[key].noun;
       }

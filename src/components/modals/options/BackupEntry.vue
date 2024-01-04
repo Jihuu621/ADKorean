@@ -53,11 +53,11 @@ export default {
       const formattedTime = this.slotData.intervalStr?.();
       switch (this.slotData.type) {
         case BACKUP_SLOT_TYPE.ONLINE:
-          return `Saves every ${formattedTime} online`;
+          return `온라인일 때 ${formattedTime}마다 저장`;
         case BACKUP_SLOT_TYPE.OFFLINE:
-          return `Saves after ${formattedTime} offline`;
+          return `오프라인이 된 후 ${formattedTime}마다 저장`;
         case BACKUP_SLOT_TYPE.RESERVE:
-          return "Pre-loading save";
+          return "프리-로드 저장";
         default:
           throw new Error("Unrecognized backup save type");
       }
@@ -65,8 +65,8 @@ export default {
     lastSaved() {
       const lastSave = GameStorage.lastBackupTimes[this.slotData.id]?.date ?? 0;
       return lastSave
-        ? `Last saved: ${TimeSpan.fromMilliseconds(this.currTime - lastSave)} ago`
-        : "Slot not currently in use";
+        ? `최근 저장: ${TimeSpan.fromMilliseconds(this.currTime - lastSave)}`
+        : "슬롯이 사용되지 않음";
     },
   },
   methods: {

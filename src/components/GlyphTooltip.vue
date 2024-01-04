@@ -110,6 +110,8 @@ export default {
       switch (this.type) {
         case "companion":
           return "Companion Glyph";
+        case "universe":
+          return "Universe Glyph"
         case "cursed":
           return "Cursed Glyph";
         case "reality":

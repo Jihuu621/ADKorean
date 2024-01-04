@@ -93,7 +93,8 @@ const rarityBorderStyles = {
     {
       lineType: "companion",
     },
-  ]
+  ],
+  
 };
 
 // This function does all the parsing of the above gradient specifications

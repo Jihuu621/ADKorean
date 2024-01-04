@@ -60,13 +60,12 @@ export default {
 <template>
   <ModalWrapper>
     <template #header>
-      Automatic Backup Saves
+      자동 백업 메뉴
     </template>
     <div class="c-info c-modal--short">
-      The game makes automatic backups based on time you have spent online or offline.
-      Timers for online backups only run when the game is open, and offline backups only save to the slot
-      with the longest applicable timer.
-      Additionally, your current save is saved into the last slot any time a backup from here is loaded.
+      게임은 온라인 또는 오프라인에서 보낸 시간을 기반으로 자동 백업을 수행합니다. 
+      온라인 백업을 위한 타이머는 게임이 열려 있을 때만 실행되고 오프라인 백업은 적용 가능한 가장 긴 타이머가 있는 슬롯에만 저장됩니다. 
+      또한, 여기서 백업 세이브을 로드할 때마다 현재 저장된 내용이 마지막 슬롯에 저장됩니다.
       <div
         class="c-modal__confirmation-toggle"
         @click="toggleOffline"
@@ -78,7 +77,7 @@ export default {
           />
         </div>
         <span class="c-modal__confirmation-toggle__text">
-          Load with offline progress disabled
+          로드할 때 오프라인 저장 비활성화
         </span>
       </div>
       <div class="c-entry-container">
@@ -89,15 +88,15 @@ export default {
           :slot-data="slot"
         />
       </div>
-      These backups are still stored in the same place as your game save and can still be lost if you do anything
-      external to the game which would delete your save itself, such as {{ deleteText }}. You can import/export
-      all backups at once as files, using these buttons:
+      이러한 백업은 게임 저장과 동일한 장소에 저장되며,
+      브라우저 쿠키를 지우는 것과 같이 게임 외부에서 저장 자체를 삭제하는 작업을 수행하는 경우 데이터가 손실될 수 있습니다.
+      아래 버튼을 사용하여 모든 백업을 파일로 한 번에 가져오거나 내보낼 수 있습니다:
       <div class="c-backup-file-ops">
         <PrimaryButton
           class="o-btn-file-ops"
           onclick="GameStorage.exportBackupsAsFile()"
         >
-          Export as file
+          파일로 내보내기
         </PrimaryButton>
         <PrimaryButton class="o-btn-file-ops">
           <input
@@ -106,10 +105,10 @@ export default {
             accept=".txt"
             @change="importAsFile"
           >
-          <label for="file">Import from file</label>
+          <label for="file">파일에서 가져오기</label>
         </PrimaryButton>
       </div>
-      Each of your three save slots has its own separate set of backups.
+      3개의 저장 슬롯 각각에는 별도의 백업 세트가 있습니다.
     </div>
   </ModalWrapper>
 </template>

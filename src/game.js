@@ -185,8 +185,8 @@ export function ratePerMinute(amount, time) {
 // eslint-disable-next-line max-params
 export function addInfinityTime(time, realTime, ip, infinities) {
   let challenge = "";
-  if (player.challenge.normal.current) challenge = `Normal Challenge ${player.challenge.normal.current}`;
-  if (player.challenge.infinity.current) challenge = `Infinity Challenge ${player.challenge.infinity.current}`;
+  if (player.challenge.normal.current) challenge = `일반 도전 ${player.challenge.normal.current}`;
+  if (player.challenge.infinity.current) challenge = `무한 도전 ${player.challenge.infinity.current}`;
   player.records.recentInfinities.pop();
   player.records.recentInfinities.unshift([time, realTime, ip, infinities, challenge]);
   GameCache.bestRunIPPM.invalidate();

@@ -34,7 +34,7 @@ export default {
   },
   computed: {
     sacrificeTooltip() {
-      return `Boosts 8th Antimatter Dimension by ${formatX(this.sacrificeBoost, 2, 2)}`;
+      return `제8 반물질 차원에 ${this.sacrificeBoost}배율을 적용함`;
     },
   },
   methods: {
@@ -111,8 +111,8 @@ export default {
         class="o-primary-btn--sacrifice"
         @click="sacrifice"
       >
-        <span v-if="isSacrificeAffordable">Dimensional Sacrifice ({{ formatX(sacrificeBoost, 2, 2) }})</span>
-        <span v-else>Dimensional Sacrifice Disabled ({{ disabledCondition }})</span>
+        <span v-if="isSacrificeAffordable">차원 희생 ({{ formatX(sacrificeBoost, 2, 2) }})</span>
+        <span v-else>차원 희생 비활성화됨 ({{ disabledCondition }})</span>
       </PrimaryButton>
       <button
         class="o-primary-btn l-button-container"

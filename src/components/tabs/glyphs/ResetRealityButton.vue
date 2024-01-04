@@ -30,7 +30,7 @@ export default {
       if (this.isInCelestialReality) {
         if (confirms.exitChallenge) Modal.exitChallenge.show({
           challengeName: "a Celestial Reality",
-          normalName: "Reality",
+          normalName: "현실",
           hasHigherLayers: false,
           exitFn: () => beginProcessReality(getRealityProps(true))
         });

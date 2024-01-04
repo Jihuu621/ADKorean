@@ -47,22 +47,22 @@ export default {
     @confirm="handleYesClick"
   >
     <template #header>
-      You are about to {{ isRestarting ? "restart" : "exit" }} {{ challengeName }}
+      당신은 현재 {{ challengeName }}을 {{ isRestarting ? "재시작하려" : "중단하려" }} 합니다.
     </template>
 
     <div class="c-modal-message__text">
       <span v-if="isRestarting">
-        You will immediately re-enter {{ challengeName }} again after confirming this modal.
+        이대로 계속한다면 당신은 즉시  {{ challengeName }}을 재시작하게 됩니다.
       </span>
       <span v-else>
-        This will place you back into a regular {{ normalName }} without any restrictions.
+        이는 당신을 평범한 {{ normalName }}으로 아무 제약 없이 되돌려보냅니다.
       </span>
       <span v-if="hasHigherLayers">
-        Other effects coming from higher-layer restrictions will still continue to apply.
+        상위 레이어에서 발현되는 모든 제약들은 그대로 유지됩니다.
       </span>
     </div>
     <template #confirm-text>
-      {{ isRestarting ? "Restart" : "Exit" }}
+      {{ isRestarting ? "재시작" : "중단" }}
     </template>
   </ModalWrapperChoice>
 </template>

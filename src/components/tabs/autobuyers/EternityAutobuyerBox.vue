@@ -85,7 +85,7 @@ export default {
   <AutobuyerBox
     :autobuyer="autobuyer"
     :is-modal="isModal"
-    name="Automatic Eternity"
+    name="자동 영원"
   >
     <template #intervalSlot>
       <ExpandingControlBox
@@ -94,7 +94,7 @@ export default {
       >
         <template #header>
           <div class="o-primary-btn c-autobuyer-box__mode-select c-autobuyer-box__mode-select-header">
-            ▼ Current Setting: ▼
+            ▼ 현재 설정: ▼
             <br>
             {{ modeName(mode) }}
           </div>

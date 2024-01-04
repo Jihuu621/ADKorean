@@ -31,16 +31,16 @@ export default {
   computed: {
     sidebarDB: () => GameDatabase.sidebarResources,
     themeLabel() {
-      return `Theme: ${Themes.find(this.theme).displayName()}`;
+      return `테마: ${Themes.find(this.theme).displayName()}`;
     },
     notationLabel() {
-      return `Notation: ${this.notation}`;
+      return `표기법: ${this.notation}`;
     },
     sidebarLabel() {
-      return `Sidebar (Modern UI): ${this.sidebarResource}`;
+      return `사이드바 (모던 UI): ${this.sidebarResource}`;
     },
     UILabel() {
-      return `UI: ${this.$viewModel.newUI ? "Modern" : "Classic"}`;
+      return `UI: ${this.$viewModel.newUI ? "모던" : "클래식 (한글 미지원)"}`;
     }
   },
   watch: {

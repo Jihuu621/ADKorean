@@ -70,7 +70,7 @@ export default {
     },
     sortGlyphs() {
       const standardOrder = ["reality", "effarig", "power", "infinity", "replication", "time", "dilation",
-        "cursed", "companion"];
+        "cursed", "companion", "universe"];
       this.glyphs.sort((a, b) => standardOrder.indexOf(a.type) - standardOrder.indexOf(b.type));
     }
   },

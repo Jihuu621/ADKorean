@@ -16,7 +16,7 @@ export default {
     },
     label: {
       type: String,
-      default: "Currently",
+      default: "현재",
       required: false
     },
     ignoreCapped: {
@@ -43,7 +43,7 @@ export default {
       if (this.config.noLabel) {
         return "";
       }
-      return `${this.reachedCap && !this.ignoreCapped ? "Capped" : this.label}: `;
+      return `${this.reachedCap && !this.ignoreCapped ? "최대" : this.label}: `;
     },
     effectDisplay() {
       return this.formatEffect(this.reachedCap ? this.cap : this.effectValue);

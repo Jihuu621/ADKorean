@@ -53,8 +53,8 @@ export default {
     typeName() {
       switch (this.type) {
         case GALAXY_TYPE.NORMAL: return "반물질 은하";
-        case GALAXY_TYPE.DISTANT: return "Distant Antimatter Galaxies";
-        case GALAXY_TYPE.REMOTE: return "Remote Antimatter Galaxies";
+        case GALAXY_TYPE.DISTANT: return "먼 반물질 은하";
+        case GALAXY_TYPE.REMOTE: return "더욱 먼 반물질 은하";
       }
       return undefined;
     },

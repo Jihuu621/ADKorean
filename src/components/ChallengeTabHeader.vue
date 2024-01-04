@@ -87,7 +87,7 @@ export default {
         class="o-primary-btn--subtab-option"
         @click="exitChallenge"
       >
-        Exit Challenge
+        도전 중단하기
       </PrimaryButton>
     </div>
   </div>

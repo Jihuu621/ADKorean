@@ -69,20 +69,19 @@ export default {
     <AutobuyerToggles />
     <OpenModalHotkeysButton />
     <div v-if="hasSeenGamespeedAlteringEffects">
-      Autobuyer intervals and time-based settings are always <b>real time</b> and therefore
+      자동구매기를 포함한 모든 시간 간격 관련 설정은 <b>현실 시간</b>을 기반으로 하므로
       <br>
-      unaffected by anything which may alter how fast the game itself is running.
+      게임의 실행 속도를 변경할 수 있는 모든 요인에 영향을 받지 않습니다.
       <br>
       <br>
     </div>
     <div v-if="!hasInfinity">
       Challenges for upgrading autobuyers are unlocked by reaching Infinity.
     </div>
-    <b>Autobuyers with no displayed bulk have unlimited bulk by default.</b>
+    <b>대량 구매 갯수가 표시되지 않은 자동구매기는 기본적으로 무제한으로 구매합니다.</b>
     <b>
-      Antimatter Dimension Autobuyers can have their bulk upgraded once interval is below {{ formatInt(100) }} ms.
+      반물질 차원 자동구매기는 구매 간격이 {{ formatInt(100) }}ms 미만이 되면 대량 구매 업그레이드를 구매할 수 있습니다.
     </b>
-    <b v-if="hasInstant">Autobuyers with "Instant" interval will trigger every game tick ({{ gameTickLength }}).</b>
     <RealityAutobuyerBox class="c-reality-pos" />
     <EternityAutobuyerBox class="c-eternity-pos" />
     <BigCrunchAutobuyerBox class="c-infinity-pos" />

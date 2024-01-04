@@ -92,7 +92,7 @@ export default {
     :autobuyer="autobuyer"
     :show-interval="!postBreak"
     :is-modal="isModal"
-    name="Automatic Big Crunch"
+    name="자동 빅 크런치"
   >
     <template
       v-if="!hasMaxedInterval"

@@ -69,13 +69,13 @@ export default {
   <AutobuyerBox
     :autobuyer="autobuyer"
     :is-modal="isModal"
-    name="Automatic Reality"
+    name="자동 현실"
   >
     <template #intervalSlot>
       <ExpandingControlBox :auto-close="true">
         <template #header>
           <div class="o-primary-btn c-autobuyer-box__mode-select c-autobuyer-box__mode-select-header">
-            ▼ Current Setting: ▼
+            ▼ 현재 설정: ▼
             <br>
             {{ modeName(mode) }}
           </div>
