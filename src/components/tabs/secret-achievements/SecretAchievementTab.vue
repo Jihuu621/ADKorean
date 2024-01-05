@@ -16,7 +16,7 @@ export default {
   <div class="l-achievements-tab">
     <div class="c-achievements-tab__header">
       <span>
-        Secret Achievements are optional and give no bonuses.
+        비밀 도전과제는 선택사항이며, 추가 보너스를 부여하지 않습니다.
       </span>
     </div>
     <div class="l-achievement-grid">

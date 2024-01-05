@@ -30,7 +30,7 @@ export default {
         v-if="!smallCrunch"
         class="l-spacing"
       >
-        The world has collapsed due to excess antimatter.
+        우주가 반물질로 가득 차 붕괴되었습니다.
       </h3>
       <button
         :class="{
@@ -39,7 +39,7 @@ export default {
         }"
         @click="handleClick"
       >
-        Big Crunch
+        빅 크런치
       </button>
     </div>
     <div v-else>
@@ -52,13 +52,13 @@ export default {
         }"
         @click="handleClick"
       >
-        Big Crunch
+        빅 크런치
       </button>
       <div
         v-if="!smallCrunch"
         class="o-emptiness"
       >
-        The world has collapsed due to excess of antimatter.
+        우주가 반물질로 가득 차 붕괴되었습니다.
       </div>
     </div>
   </span>

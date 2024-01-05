@@ -22,12 +22,12 @@ export default {
   <div class="l-challenges-tab">
     <ChallengeTabHeader />
     <div>
-      Some Normal Challenges have requirements to be able to run that challenge.
+      일부 일반 도전은 해당 도전을 시작하기 위한 조건이 있습니다.
     </div>
     <div>
-      If you have an active Big Crunch Autobuyer, it will attempt to Crunch
-      as soon as possible when reaching Infinite antimatter.
+      만약 당신이 빅 크런치 자동구매기를 보유하고 있다면, 반물질이 무한 (1.8e308)개에 도달하였을 시 즉시 빅 크런치가 실행됩니다.
     </div>
+    <br>
     <ChallengeGrid
       v-slot="{ challenge }"
       :challenges="challenges"

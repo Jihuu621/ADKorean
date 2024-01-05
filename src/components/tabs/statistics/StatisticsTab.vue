@@ -172,39 +172,37 @@ export default {
   <div class="c-stats-tab">
     <div>
       <PrimaryButton onclick="Modal.catchup.show(0)">
-        View Content Summary
+        컨텐츠 요약 확인하기
       </PrimaryButton>
       <div class="c-stats-tab-title c-stats-tab-general">
-        General
+        일반
       </div>
       <div class="c-stats-tab-general">
-        <div>You have made a total of {{ format(totalAntimatter, 2, 1) }} antimatter.</div>
-        <div>You have played for {{ realTimePlayed }}. (real time)</div>
+        <div>총 {{ format(totalAntimatter, 2, 1) }} 반물질을 만들었습니다.</div>
+        <div>당신은 총 {{ realTimePlayed }} 동안 플레이하였습니다. (현실 시간)</div>
         <div v-if="reality.isUnlocked">
-          Your existence has spanned {{ reality.totalTimePlayed }} of time. (game time)
+          당신의 존재가 {{ reality.totalTimePlayed }} 전에 생성되었습니다. (게임 시간)
         </div>
         <div>
-          Your save was created on {{ startDate }} ({{ saveAge }} ago)
+          당신의 세이브는 {{ startDate }}에 만들어졌습니다.
         </div>
         <br>
         <div>
-          You have seen {{ quantifyInt("news message", totalNews) }} in total.
+          지금까지 뉴스를 총 {{ totalNews }}개 보았습니다.
         </div>
         <div>
-          You have seen {{ quantifyInt("unique news message", uniqueNews) }}.
+          지금까지 특별한 뉴스를 총 {{ uniqueNews }}개 보았습니다.
         </div>
         <div>
-          You have unlocked {{ quantifyInt("Secret Achievement", secretAchievementCount) }}.
+          지금까지 비밀 업적을 총 {{ secretAchievementCount }}개 달성했습니다.
         </div>
         <div v-if="paperclips">
-          You have {{ quantifyInt("useless paperclip", paperclips) }}.
+          당신은 아무 쓸모 없는 클립을 {{ paperclips }}개 가지고 있습니다.
         </div>
         <div v-if="fullGameCompletions">
           <br>
           <b>
-            You have completed the entire game {{ quantifyInt("time", fullGameCompletions) }}.
-            <br>
-            You have played for {{ fullTimePlayed }} across all playthroughs.
+            당신은 {{ fullGameCompletions }}만에 이 게임을 클리어했습니다.
           </b>
         </div>
       </div>
@@ -228,31 +226,28 @@ export default {
       class="c-stats-tab-subheader c-stats-tab-general"
     >
       <div class="c-stats-tab-title c-stats-tab-infinity">
-        Infinity
+        무한
       </div>
       <div>
-        You have {{ infinityCountString }}<span v-if="eternity.isUnlocked"> this Eternity</span>.
+        당신은 <span v-if="eternity.isUnlocked">이번 영원에서</span> 총 {{ infinityCountString }}번 무한에 도달하였습니다. 
       </div>
       <div v-if="infinity.banked.gt(0)">
-        You have {{ formatDecimalAmount(infinity.banked.floor()) }}
-        {{ pluralize("Banked Infinity", infinity.banked.floor()) }}.
+        현재 무한 {{ infinity.banked.floor() }}개가 저장되어 있습니다.
       </div>
       <div v-if="infinity.hasBest">
-        Your fastest Infinity was {{ infinity.best.toStringShort() }}.
+      당신의 가장 빠른 무한은 {{ infinity.best.toStringShort() }}입니다.
       </div>
       <div v-else>
-        You have no fastest Infinity<span v-if="eternity.isUnlocked"> this Eternity</span>.
+        당신은 <span v-if="eternity.isUnlocked">이번 영원에서</span> 가장 빠른 무한 기록이 존재하지 않습니다.
       </div>
       <div>
-        You have spent {{ infinity.this.toStringShort() }} in this Infinity.
+        당신은 이번 무한에서 {{ infinity.this.toStringShort() }}동안 머물렀습니다.
         <span v-if="reality.isUnlocked">
-          ({{ infinity.thisReal.toStringShort() }} real time)
+          ({{ infinity.thisReal.toStringShort() }} 현실 시간)
         </span>
       </div>
       <div>
-        Your best Infinity Points per minute
-        <span v-if="eternity.count.gt(0)">this Eternity </span>
-        is {{ format(infinity.bestRate, 2, 2) }}.
+        <span v-if="eternity.isUnlocked">이번 영원에서</span> 당신의 최대 분당 IP 생산 기록은 {{ format(infinity.bestRate, 2, 2) }} IP/분 입니다.
       </div>
       <br>
     </div>

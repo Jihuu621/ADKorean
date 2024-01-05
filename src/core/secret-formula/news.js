@@ -14,7 +14,7 @@ function newsAnimSpd(seconds) {
 export const news = [
   {
     id: "a1",
-    text: "The cookie is a lie.",
+    text: "그 쿠키는 거짓이야.",
   },
   {
     id: "a2",
@@ -5056,7 +5056,7 @@ export const news = [
   },
   {
     id: "ai436",
-    text: "I once saw a news ticker that said something like:"
+    text: "당신의 미친 행운이 수천개의 뉴스들 중 한글로 된 뉴스를 찾게 도왔습니다!!!!"
   },
   {
     id: "ai437",

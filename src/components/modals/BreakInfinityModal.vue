@@ -9,12 +9,9 @@ export default {
   computed: {
     message() {
       const infinity = formatPostBreak(Number.MAX_VALUE, 2);
-      return `Breaking Infinity will allow you to gain antimatter past ${infinity}${PlayerProgress.eternityUnlocked()
-        ? "." : `, and allow you to read numbers past ${infinity}.`}
-        Dimensions and Tickspeed Upgrades will scale in cost faster after ${infinity} antimatter.
-        You will gain additional Infinity Points on Big Crunch based on antimatter produced over ${infinity}.\
-        ${EternityMilestone.keepAutobuyers.isReached ? "" : `\nIt will also unlock Break Infinity Upgrades and max\
-        all Normal Challenge Autobuyers.`}`.split("\n");
+      return `무한을 돌파하면 반물질을 ${infinity}개 이상으로 모을 수 있습니다.
+        차원과 틱스피드 업그레이드의 가격은 반물질이 ${infinity}을 넘어가면 더욱 빠르게 상승합니다.
+        당신이 생산한 반물질이 ${infinity} 이상일 경우 반물질의 개수의 비례하여 무한 포인트를 추가로 얻습니다.`.split("\n");
     },
   },
   methods: {
@@ -31,7 +28,7 @@ export default {
     @confirm="handleYesClick"
   >
     <template #header>
-      You are Breaking Infinity
+      무한을 돌파하려 합니다.
     </template>
     <div class="c-modal-message__text">
       <span

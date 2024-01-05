@@ -24,8 +24,8 @@ export default {
       return undefined;
     },
     text() {
-      if (this.isEnslaved) return "FEEL ETERNITY";
-      return this.isBroken ? "INFINITY IS BROKEN" : "BREAK INFINITY";
+      if (this.isEnslaved) return "영원을 느낀다";
+      return this.isBroken ? "무한이 돌파되었다." : "무한 돌파";
     }
   },
   methods: {
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <template>
-  <button
+  <button style="font-size:1.5rem;"
     v-tooltip="tooltip"
     :class="classObject"
     @click="clicked"

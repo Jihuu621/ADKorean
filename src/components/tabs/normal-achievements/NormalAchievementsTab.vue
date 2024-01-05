@@ -42,14 +42,14 @@ export default {
       const boostList = [];
 
       const dimMultList = [];
-      dimMultList.push("Antimatter");
-      if (this.achMultToIDS) dimMultList.push("Infinity");
-      if (this.achMultToTDS) dimMultList.push("Time");
-      boostList.push(`${makeEnumeration(dimMultList)} Dimensions: ${achievementPower}`);
+      dimMultList.push("반물질");
+      if (this.achMultToIDS) dimMultList.push("무한");
+      if (this.achMultToTDS) dimMultList.push("시간");
+      boostList.push(`${makeEnumeration(dimMultList)} 차원: ${achievementPower}`);
 
-      if (this.achMultToTP) boostList.push(`Tachyon Particles: ${achTPEffect}`);
-      if (this.achMultToBH) boostList.push(`Black Hole Power: ${achievementPower}`);
-      if (this.achMultToTT) boostList.push(`Time Theorem production: ${achievementPower}`);
+      if (this.achMultToTP) boostList.push(`타키온 입자: ${achTPEffect}`);
+      if (this.achMultToBH) boostList.push(`블랙홀 파워: ${achievementPower}`);
+      if (this.achMultToTT) boostList.push(`시간 정리 생산: ${achievementPower}`);
       return `${boostList.join("<br>")}`;
     },
   },
@@ -134,26 +134,26 @@ export default {
       <PrimaryToggleButton
         v-model="hideCompletedRows"
         class="o-primary-btn--subtab-option"
-        label="Hide completed rows:"
+        label="완료한 행 숨기기:"
       />
       <PrimaryToggleButton
         v-if="showAutoAchieve"
         v-model="isAutoAchieveActive"
         class="o-primary-btn--subtab-option"
-        label="Auto Achievements:"
+        label="자동 도전과제 달성:"
       />
     </div>
     <div class="c-achievements-tab__header c-achievements-tab__header--multipliers">
       <span v-if="isDoomed">
-        All Achievement multipliers have been disabled<SwapAchievementImagesButton />
+        모든 도전과제 배율이 비활성화되었습니다.<SwapAchievementImagesButton />
       </span>
       <span v-else>
-        Achievements provide a multiplier to<SwapAchievementImagesButton />
+        도전과제 배율<SwapAchievementImagesButton />
         <div v-html="boostText" />
       </span>
     </div>
     <div class="c-achievements-tab__header">
-      Achievements with a <i class="fas fa-star" /> icon also give an additional reward.
+      <i class="fas fa-star" /> 아이콘이 포함된 도전과제를 달성하면 추가 보상이 주어집니다.
     </div>
     <div
       v-if="showAutoAchieve"

@@ -61,26 +61,26 @@ export default {
       <PrimaryToggleButton
         v-model="retryChallenge"
         class="o-primary-btn--subtab-option"
-        label="Automatically retry challenges:"
+        label="자동으로 도전 재시작하기:"
       />
       <PrimaryToggleButton
         v-if="isShowAllVisible"
         v-model="showAllChallenges"
         class="o-primary-btn--subtab-option"
-        label="Show all known challenges:"
+        label="알려진 모든 도전 보이기:"
       />
       <PrimaryToggleButton
         v-if="isAutoECVisible"
         v-model="autoEC"
         class="o-primary-btn--subtab-option"
-        label="Auto Eternity Challenges:"
+        label="자동으로 영원 도전 시작하기:"
       />
       <PrimaryButton
         v-if="isInChallenge"
         class="o-primary-btn--subtab-option"
         @click="restartChallenge"
       >
-        Restart Challenge
+        도전 재시작하기
       </PrimaryButton>
       <PrimaryButton
         v-if="isInChallenge"

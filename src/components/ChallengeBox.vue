@@ -35,18 +35,23 @@ export default {
     },
   },
   data() {
+    
     return {
       inC1: Boolean,
       infinities: new Decimal(0),
+      
     };
   },
   computed: {
+
     buttonClassObject() {
+      
       const challengeLocked = !(this.isCompleted || this.isRunning || this.inC1 || this.isUnlocked);
       // It's important to disable the cursor for Normal Challenge 1, challenges that are running, or
       // for challenges unable to be unlocked and not unlocked.
       const challengeNotEnterable = !this.isUnlocked || this.isRunning || this.name === "C1";
       return {
+        
         "o-challenge-btn": true,
         "o-challenge-btn--broken": this.overrideLabel.length > 0 && this.name !== "C10",
         "o-challenge-btn--broken-alt": this.overrideLabel.length > 0 && this.name === "C10",
@@ -59,22 +64,26 @@ export default {
     },
     buttonText() {
       if (this.overrideLabel.length > 0) return this.overrideLabel;
-      if (this.isRunning || this.inC1) return "Running";
-      if (this.isCompleted) return "Completed";
-      if (this.isUnlocked) return "Start";
+      if (this.isRunning || this.inC1) return "진행중";
+      if (this.isCompleted) return "완료";
+      if (this.isUnlocked) return "시작";
       const lockedText = this.lockedAt === undefined
         ? ""
         : ` (${formatInt(this.infinities)}/${formatInt(this.lockedAt)})`;
-      return `Locked${lockedText}`;
+      return `잠김${lockedText}`;
     }
   },
   methods: {
     update() {
       this.inC1 = this.name === "C1" && !this.isCompleted && !Player.isInAntimatterChallenge;
       this.infinities.copyFrom(Currency.infinities);
+
+      
     },
   }
 };
+
+
 </script>
 
 <template>
@@ -83,6 +92,7 @@ export default {
       type="challenges"
       class="l-hint-text--challenge"
     >
+    
       {{ name }}
     </HintText>
     <slot name="top" />

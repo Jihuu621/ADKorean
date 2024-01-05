@@ -55,12 +55,12 @@ export default {
       class="l--spoon-btn-group__little-spoon o-primary-btn--small-spoon"
       @click="buyMaxIPMult()"
     >
-      Max Infinity Point mult
+       IP 2배 최대 구매
     </PrimaryButton>
     <PrimaryToggleButton
       v-if="isAutoUnlocked"
       v-model="isAutobuyerActive"
-      label="Autobuy IP mult"
+      label="IP 자동구매기"
       class="l--spoon-btn-group__little-spoon o-primary-btn--small-spoon"
     />
   </div>

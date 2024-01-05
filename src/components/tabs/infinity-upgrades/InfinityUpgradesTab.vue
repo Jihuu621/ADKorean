@@ -140,7 +140,7 @@ export default {
       You cannot Charge Infinity Upgrades while Doomed.
     </div>
     <br>
-    Within each column, the upgrades must be purchased from top to bottom.
+    각 열 내 업그레이드는 위에서 아래 순으로 구매해야 합니다.
     <br>
     <div class="l-infinity-upgrade-grid l-infinity-upgrades-tab__grid">
       <div

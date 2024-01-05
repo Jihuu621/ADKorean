@@ -11,7 +11,7 @@ export const sidebarResources = [
   },
   {
     id: 2,
-    optionName: "Antimatter",
+    optionName: "반물질",
     isAvailable: () => true,
     value: () => Currency.antimatter.value,
     formatValue: x => format(x, 2, 1),
@@ -19,7 +19,7 @@ export const sidebarResources = [
   },
   {
     id: 3,
-    optionName: "Infinity Points",
+    optionName: "무한 포인트",
     isAvailable: () => PlayerProgress.infinityUnlocked(),
     value: () => Currency.infinityPoints.value.floor(),
     formatValue: x => format(x, 2),
@@ -27,7 +27,7 @@ export const sidebarResources = [
   },
   {
     id: 4,
-    optionName: "Replicanti",
+    optionName: "복제자",
     isAvailable: () => Replicanti.areUnlocked || PlayerProgress.eternityUnlocked(),
     value: () => Replicanti.amount,
     formatValue: x => format(x, 2),
@@ -35,7 +35,7 @@ export const sidebarResources = [
   },
   {
     id: 5,
-    optionName: "Eternity Points",
+    optionName: "영원 포인트",
     isAvailable: () => PlayerProgress.eternityUnlocked(),
     value: () => Currency.eternityPoints.value.floor(),
     formatValue: x => format(x, 2),
@@ -43,7 +43,7 @@ export const sidebarResources = [
   },
   {
     id: 6,
-    optionName: "Total TT",
+    optionName: "시간 정리",
     isAvailable: () => PlayerProgress.eternityUnlocked(),
     value: () => player.timestudy.theorem.plus(TimeTheorems.calculateTimeStudiesCost()),
     formatValue: x => format(x, 2),
@@ -51,7 +51,7 @@ export const sidebarResources = [
   },
   {
     id: 7,
-    optionName: "Tachyon Particles",
+    optionName: "타키온 입자",
     isAvailable: () => PlayerProgress.dilationUnlocked() || PlayerProgress.realityUnlocked(),
     value: () => Currency.tachyonParticles.value,
     formatValue: x => format(x, 2),
@@ -59,7 +59,7 @@ export const sidebarResources = [
   },
   {
     id: 8,
-    optionName: "Dilated Time",
+    optionName: "팽창된 시간",
     isAvailable: () => PlayerProgress.dilationUnlocked() || PlayerProgress.realityUnlocked(),
     value: () => Currency.dilatedTime.value,
     formatValue: x => format(x, 2),
@@ -67,7 +67,7 @@ export const sidebarResources = [
   },
   {
     id: 9,
-    optionName: "Reality Machines",
+    optionName: "리얼리티 머신",
     isAvailable: () => PlayerProgress.realityUnlocked(),
     value: () => Currency.realityMachines.value,
     formatValue: x => format(x, 2),
@@ -75,7 +75,7 @@ export const sidebarResources = [
   },
   {
     id: 10,
-    optionName: "Relic Shards",
+    optionName: "유물 파편",
     isAvailable: () => TeresaUnlocks.effarig.isUnlocked,
     value: () => new Decimal(Currency.relicShards.value),
     formatValue: x => format(x, 2),
@@ -83,7 +83,7 @@ export const sidebarResources = [
   },
   {
     id: 11,
-    optionName: "Imaginary Machines",
+    optionName: "허수 머신",
     isAvailable: () => MachineHandler.isIMUnlocked,
     value: () => new Decimal(Currency.imaginaryMachines.value),
     formatValue: x => format(x, 2),
@@ -91,7 +91,7 @@ export const sidebarResources = [
   },
   {
     id: 12,
-    optionName: "All Machines",
+    optionName: "리얼리티 + 허수 머신",
     resourceName: "Machines",
     isAvailable: () => MachineHandler.isIMUnlocked,
     // This is a dummy value to prevent vue errors
@@ -101,7 +101,7 @@ export const sidebarResources = [
   },
   {
     id: 13,
-    optionName: "Dark Matter",
+    optionName: "암흑 물질",
     isAvailable: () => Laitela.isUnlocked,
     value: () => Currency.darkMatter,
     formatValue: x => format(x, 2),
@@ -117,7 +117,7 @@ export const sidebarResources = [
   },
   {
     id: 15,
-    optionName: "Singularities",
+    optionName: "특이점",
     isAvailable: () => Laitela.isUnlocked,
     value: () => new Decimal(Currency.singularities.value),
     formatValue: x => format(x, 2),
@@ -125,7 +125,7 @@ export const sidebarResources = [
   },
   {
     id: 16,
-    optionName: "Reality Shards",
+    optionName: "리얼리티 샤드",
     isAvailable: () => Pelle.isDoomed,
     value: () => Currency.realityShards,
     formatValue: x => format(x, 2),

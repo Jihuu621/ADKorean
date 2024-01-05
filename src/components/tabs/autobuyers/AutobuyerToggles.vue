@@ -50,15 +50,15 @@ export default {
   <div class="c-subtab-option-container">
     <PrimaryToggleButton
       v-model="autobuyersOn"
-      on="Pause autobuyers"
-      off="Resume autobuyers"
+      on="자동구매기 일시정지"
+      off="자동구매기 재시작"
       class="o-primary-btn--subtab-option"
     />
     <PrimaryButton
       class="o-primary-btn--subtab-option"
       @click="toggleAllAutobuyers()"
     >
-      {{ allAutobuyersDisabled ? "Enable" : "Disable" }} all autobuyers
+      자동구매기 전체 {{ allAutobuyersDisabled ? "활성화" : "비활성화" }}
     </PrimaryButton>
     <span v-if="isDoomed">
       <PrimaryButton

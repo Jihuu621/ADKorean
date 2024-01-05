@@ -130,7 +130,7 @@ export default {
       v-if="!isBought"
       br
       :config="config"
-      name="Infinity Point"
+      name="무한 포인트"
     />
     <slot />
   </button>

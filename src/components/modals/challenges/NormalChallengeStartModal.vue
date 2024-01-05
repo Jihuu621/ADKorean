@@ -20,24 +20,22 @@ export default {
       return this.challenge.isCompleted;
     },
     message() {
-      return `You will Big Crunch (if possible) and start a new Infinity within the Challenge with all the
-        Challenge-specific restrictions and modifiers active.
-        To complete the Challenge${this.challengeIsCompleted ? "" : " and gain its reward"},
-        you must reach Infinity again.
-        You do not start with any Dimension Boosts or Galaxies, regardless of upgrades.`;
+      return `당신은 가능하다면 빅 크런치를 실행하고 도전 내에서 각각의 조건과 함께 새로운 무한을 시작하게 됩니다.
+        이 도전을 완료하기 위해서는 도전 안에서 무한에 도달해야 하며,
+        업그레이드와 상관 없이 차원 가속이나 반물질 은하를 보유하지 않은 채로 시작합니다.`;
     },
     entranceLabel() {
-      return `You are about to enter Challenge ${this.id}`;
+      return `일반 도전 ${this.id}에 들어갑니다`;
     },
     reward() {
-      return `The reward for completing this challenge is: ${this.challenge._config.reward}`;
+      return `도전 완료시 보상은 다음과 같습니다. : ${this.challenge._config.reward}`;
     },
     condition() {
       let conditionOfChallenge = this.challenge._config.description;
       if (typeof conditionOfChallenge === "function") {
         conditionOfChallenge = conditionOfChallenge();
       }
-      return `Inside this Challenge, ${conditionOfChallenge}`;
+      return `${conditionOfChallenge}`;
     }
   },
   created() {

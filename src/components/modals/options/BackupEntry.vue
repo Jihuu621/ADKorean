@@ -24,7 +24,7 @@ export default {
       return GameStorage.loadFromBackup(this.slotData.id);
     },
     progressStr() {
-      if (!this.save) return "(Empty)";
+      if (!this.save) return "(비어있음)";
 
       // These will be checked in order; the first nonzero resource will be returned
       const resources = [this.save.celestials.pelle.realityShards,

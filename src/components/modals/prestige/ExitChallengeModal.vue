@@ -47,7 +47,7 @@ export default {
     @confirm="handleYesClick"
   >
     <template #header>
-      당신은 현재 {{ challengeName }}을 {{ isRestarting ? "재시작하려" : "중단하려" }} 합니다.
+      {{ challengeName }}을(를) {{ isRestarting ? "재시작하려" : "중단하려" }} 합니다.
     </template>
 
     <div class="c-modal-message__text">
@@ -55,7 +55,7 @@ export default {
         이대로 계속한다면 당신은 즉시  {{ challengeName }}을 재시작하게 됩니다.
       </span>
       <span v-else>
-        이는 당신을 평범한 {{ normalName }}으로 아무 제약 없이 되돌려보냅니다.
+        이는 당신을 기본 {{ normalName }}으로 아무 제약 없이 되돌려보냅니다.
       </span>
       <span v-if="hasHigherLayers">
         상위 레이어에서 발현되는 모든 제약들은 그대로 유지됩니다.
