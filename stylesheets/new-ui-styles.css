@@ -180,6 +180,10 @@ body.t-s12 {
   border-left-color: var(--color-celestials);
 }
 
+.o-tab-btn--korean::after {
+  border-left-color: var(--color-korean);
+}
+
 .tab-button.shop {
   background-color: #d9bb26;
 }
@@ -333,6 +337,16 @@ body.t-s12 {
 
 .o-tab-btn--celestial .o-subtab__tooltip::after {
   border-top-color: var(--color-celestials);
+}
+
+.o-tab-btn--korean .o-subtab__tooltip {
+  color: var(--color-korean);
+  background: var(--color-prestige--accent);
+  border-color: var(--color-korean);
+}
+
+.o-tab-btn--korean .o-subtab__tooltip::after {
+  border-top-color: var(--color-korean);
 }
 
 .active {
