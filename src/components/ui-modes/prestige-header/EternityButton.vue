@@ -202,28 +202,28 @@ const EP_BUTTON_DISPLAY_TYPE = {
 
     <!-- First time -->
     <template v-else-if="type === 0">
-      Other times await... I need to become Eternal
+      또다른 시간이 기다리고 있어.. 나는 영원해져야 해..
     </template>
 
     <!-- Normal -->
     <template v-else-if="type === 1">
-      Eternity for
+      영원에 도달하여
       <span :style="amountStyle">{{ format(gainedEP, 2) }}</span>
-      <span v-if="showEPRate"> EP</span>
+      <span v-if="showEPRate"> EP 얻기</span>
       <span v-else> Eternity {{ pluralize("Point", gainedEP) }}</span>
       <br>
       <template v-if="showEPRate">
-        Current: {{ format(currentEPRate, 2, 2) }} EP/min
+        현재: {{ format(currentEPRate, 2, 2) }} EP/min
         <br>
-        Peak: {{ format(peakEPRate, 2, 2) }} EP/min
+        최대: {{ format(peakEPRate, 2, 2) }} EP/min
         <br>
-        at {{ format(peakEPRateVal, 2, 2) }} EP
+        {{ format(peakEPRateVal, 2, 2) }}에서
       </template>
     </template>
 
     <!-- Challenge -->
     <template v-else-if="type === 2 || (type === 6 && !canEternity)">
-      Other challenges await... I need to become Eternal
+      또다른 도전들이 기다리고 있어.. 나는 영원해져야 해..
     </template>
 
     <!-- Dilation -->
@@ -246,7 +246,7 @@ const EP_BUTTON_DISPLAY_TYPE = {
 
     <!-- Challenge with multiple completions -->
     <template v-else-if="type === 6">
-      Other challenges await...
+      또다른 도전이 기다리고 있어..
       <template v-if="fullyCompleted">
         <br>
         (This challenge is already fully completed)

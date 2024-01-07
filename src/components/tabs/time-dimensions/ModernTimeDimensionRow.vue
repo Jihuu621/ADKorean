@@ -44,7 +44,7 @@ export default {
       return ui.view.shiftDown;
     },
     name() {
-      return `${TimeDimension(this.tier).shortDisplayName} Time Dimension`;
+      return `제${this.tier} 시간 차원`;
     },
     buttonContents() {
       if (this.showTTCost) {
@@ -54,8 +54,8 @@ export default {
     },
     tooltipContents() {
       if (this.showTTCost) return `${this.formattedEPCost}<br>${this.timeEstimate}`;
-      if (this.isCapped) return `Nameless prevents the purchase of more than ${format(1)} Time Dimension`;
-      return `Purchased ${quantifyInt("time", this.bought)}`;
+      if (this.isCapped) return `이름없는 자들이 시간 차원을 ${format(1)}개 이상 구매하는 것을 막고 있습니다.`;
+      return `${this.bought}번 구매함`;
     },
     showRow() {
       return this.realityUnlocked || this.isUnlocked || this.requirementReached;

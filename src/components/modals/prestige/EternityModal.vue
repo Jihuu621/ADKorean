@@ -17,18 +17,16 @@ export default {
   computed: {
     message() {
       return PlayerProgress.eternityUnlocked()
-        ? `Eternity will reset everything except Achievements, Challenge records, and anything under the General header
-          on the Statistics tab.`
-        : `Eternity will reset everything except Achievements, Challenge records, and anything under the General header
-          on the Statistics tab. You will also gain an Eternity Point and unlock various upgrades.`;
+        ? `영원은 도전과제, 도전 기록 및 통계 탭의 일반 헤더 아래에 있는 모든 항목을 제외한 모든 걸 초기화합니다.`
+        : `영원은 도전과제, 도전 기록 및 통계 탭의 일반 헤더 아래에 있는 모든 항목을 제외한 모든 걸 초기화합니다.
+         또한 영원 포인트(EP)를 획득하고 다양한 업그레이드를 잠금 해제할 수 있습니다.`;
     },
     gainedEPOnEternity() {
-      return `You will gain ${quantify("Eternity", this.gainedEternities, 2)} 
-      and ${quantify("Eternity Point", this.gainedEternityPoints, 2)} on Eternity.`;
+      return `당신은 영원 ${this.gainedEternities}번과 ${quantify("EP", this.gainedEternityPoints, 2)}를 얻게 됩니다.`;
     },
     startWithIP() {
       return this.startingIP.gt(0)
-        ? `You will start your next Eternity with ${quantify("Infinity Point", this.startingIP, 2)}.`
+        ? `당신은 다음 영원을 ${quantify("IP", this.startingIP, 2)}를 보유한 상태로 시작하게 됩니다.`
         : ``;
     },
     eternityChallenge() {
@@ -60,7 +58,7 @@ export default {
 
 <template>
   <ResetModal
-    :header="exitingEC ? 'Complete Eternity Challenge' : 'You are about to Eternity'"
+    :header="exitingEC ? 'Complete Eternity Challenge' : '영원에 도달하려 합니다.'"
     :message="message"
     :gained-resources="gainedEPOnEternity"
     :starting-resources="startWithIP"

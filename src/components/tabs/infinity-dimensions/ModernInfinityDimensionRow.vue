@@ -61,9 +61,9 @@ export default {
       return this.costDisplay.length > 15;
     },
     capTooltip() {
-      if (this.enslavedRunning) return `Nameless prevents the purchase of more than ${format(10)} Infinity Dimensions`;
+      if (this.enslavedRunning) return `이름없는 자들이 무한 차원을 ${format(10)}개 이상 구매하는 것을 막고 있습니다.`;
       if (this.isCapped) return `Cap reached at ${format(this.capIP)} IP`;
-      return `Purchased ${quantifyInt("time", this.purchases)}`;
+      return `${this.purchases}번 구매함`;
     },
     showRow() {
       return this.eternityReached || this.isUnlocked || this.canUnlock || this.amount.gt(0) ||
