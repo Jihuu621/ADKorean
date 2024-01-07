@@ -43,19 +43,19 @@ export default {
       return ui.view.shiftDown;
     },
     name() {
-      return `${InfinityDimension(this.tier).shortDisplayName} Infinity Dimension`;
+      return `제${this.tier} 무한 차원`;
     },
     costDisplay() {
       if (this.isUnlocked || this.shiftDown) {
-        if (this.isCapped) return "Capped";
-        return this.showCostTitle ? `Cost: ${format(this.cost)} IP` : `${format(this.cost)} IP`;
+        if (this.isCapped) return "최대";
+        return this.showCostTitle ? `가격: ${format(this.cost)} IP` : `${format(this.cost)} IP`;
       }
 
       if (this.canUnlock) {
-        return "Unlock";
+        return "해금";
       }
 
-      return `Reach ${formatPostBreak(InfinityDimension(this.tier).amRequirement)} AM`;
+      return `반물질 ${formatPostBreak(InfinityDimension(this.tier).amRequirement)}개에 도달하기`;
     },
     hasLongText() {
       return this.costDisplay.length > 15;
@@ -150,7 +150,7 @@ export default {
         class="o-primary-btn--id-auto"
         @click="buyMaxInfinityDimension"
       >
-        Buy Max
+        최대 구매
       </PrimaryButton>
     </div>
   </div>

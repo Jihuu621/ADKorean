@@ -24,10 +24,10 @@ export default {
       const first = this.nextIC?.id === 1;
       const next = InfinityChallenges.nextICUnlockAM;
 
-      if (first) return `The first Infinity Challenge unlocks at ${format(next)} antimatter.`;
+      if (first) return `첫 무한 도전은 반물질 ${format(next)}개에 도달할 시 해금됩니다.`;
       return next === undefined
-        ? "All Infinity Challenges unlocked"
-        : `Next Infinity Challenge unlocks at ${format(next)} antimatter.`;
+        ? "모든 무한 도전이 해금되었습니다."
+        : `다음 무한 도전은 반물질 ${format(next)}개에 도달할 시 해금됩니다.`;
     }
   },
   methods: {
@@ -46,10 +46,10 @@ export default {
   <div class="l-challenges-tab">
     <ChallengeTabHeader />
     <div>
-      An active Big Crunch Autobuyer will Crunch immediately when
-      reaching an Infinity Challenge's antimatter goal, regardless of settings.
+      빅 크런치 자동구매기는 반물질이 해당 무한 도전의 목표치에 도달하였을 시 즉시 빅 크런치를 실행합니다.
     </div>
     <div>{{ nextAtDisplay }}</div>
+    <br>
     <ChallengeGrid
       v-slot="{ challenge }"
       :challenges="challenges"

@@ -86,52 +86,52 @@ export default {
 <template>
   <ModalWrapperOptions class="c-modal-options__large">
     <template #header>
-      Info Display Options
+      정보 디스플레이 설정
     </template>
     <div class="c-modal-options__button-container">
       <ModalOptionsToggleButton
         v-model="showPercentage"
-        text="Show % gain:"
+        text="% 획득 보이기:"
       />
       <ModalOptionsToggleButton
         v-model="achievements"
-        text="Achievement IDs:"
+        text="도전과제 ID:"
       />
       <ModalOptionsToggleButton
         v-model="achievementUnlockStates"
-        text="Achievement unlock state indicators:"
+        text="도전과제 달성 알림:"
       />
       <ModalOptionsToggleButton
         v-if="infinityUnlocked"
         v-model="challenges"
-        text="Challenge IDs:"
+        text="도전 ID:"
       />
       <ModalOptionsToggleButton
         v-if="eternityUnlocked"
         v-model="studies"
-        text="Time Study IDs:"
+        text="시간 연구 ID:"
       />
       <ModalOptionsToggleButton
         v-if="realityUnlocked"
         v-model="glyphEffectDots"
-        text="Glyph effect dots:"
+        text="글리프 효과 도트:"
       />
       <ModalOptionsToggleButton
         v-if="realityUnlocked"
         v-model="realityUpgrades"
-        text="Reality Upgrade names:"
+        text="현실 업그레이드 이름:"
       />
       <ModalOptionsToggleButton
         v-if="realityUnlocked"
         v-model="perks"
-        text="Perk IDs:"
+        text="퍼크 ID:"
       />
       <ModalOptionsToggleButton
         v-if="alchemyUnlocked"
         v-model="alchemy"
-        text="Alchemy resource amounts:"
+        text="연금술 재료 갯수:"
       />
     </div>
-    Note: All types of additional info above will always display when holding shift.
+    참고: 위에 표시된 모든 요소들은 쉬프트 키를 누르고 있는 동안 표시됩니다.
   </ModalWrapperOptions>
 </template>

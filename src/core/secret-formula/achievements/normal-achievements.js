@@ -461,7 +461,7 @@ export const normalAchievements = [
   },
   {
     id: 73,
-    name: "이 도전과제는 존재하지 않습니다.",
+    name: "이 도전과제는 존재하지 않습니다",
     get description() { return `${formatPostBreak(DC.D9_9999E9999, 4)} 반물질에 도달한다.`; },
     checkRequirement: () => Currency.antimatter.gte(DC.D9_9999E9999),
     checkEvent: GAME_EVENT.GAME_TICK_AFTER,
@@ -597,15 +597,14 @@ export const normalAchievements = [
   },
   {
     id: 91,
-    name: "Ludicrous Speed",
+    name: "속도의 한계를 보여줄게",
     get description() {
-      return `Big Crunch for ${format(DC.E200)} Infinity Points in ${formatInt(2)} seconds or less.`;
+      return `${formatInt(2)}초 내로 빅 크런치를 하여 ${format(DC.E200)}개의 무한 포인트를 획득한다.`;
     },
     checkRequirement: () => gainedInfinityPoints().exponent >= 200 && Time.thisInfinityRealTime.totalSeconds <= 2,
     checkEvent: GAME_EVENT.BIG_CRUNCH_BEFORE,
     get reward() {
-      return `All Antimatter Dimensions are significantly stronger in the
-      first ${formatInt(5)} seconds of Infinities.`;
+      return `무한을 시작한 후 처음 ${formatInt(5)}초간 반물질 차원이 강해진다.`;
     },
     effect: () => Math.max((5 - Time.thisInfinity.totalSeconds) * 60, 1),
     effectCondition: () => Time.thisInfinity.totalSeconds < 5,
@@ -613,15 +612,14 @@ export const normalAchievements = [
   },
   {
     id: 92,
-    name: "I brake for NOBODY!",
+    name: "정지가 안돼",
     get description() {
-      return `Big Crunch for ${format(DC.E250)} Infinity Points in ${formatInt(20)} seconds or less.`;
+      return `${formatInt(2)}초 내로 빅 크런치를 하여 ${format(DC.E250)}개의 무한 포인트를 획득한다.`;
     },
     checkRequirement: () => gainedInfinityPoints().exponent >= 250 && Time.thisInfinityRealTime.totalSeconds <= 20,
     checkEvent: GAME_EVENT.BIG_CRUNCH_BEFORE,
     get reward() {
-      return `All Antimatter Dimensions are significantly stronger in the
-      first ${formatInt(60)} seconds of Infinities.`;
+      return `무한을 시작한 후 처음 ${formatInt(60)}초간 반물질 차원이 강해진다.`;
     },
     effect: () => Math.max((1 - Time.thisInfinity.totalMinutes) * 100, 1),
     effectCondition: () => Time.thisInfinity.totalMinutes < 1,
@@ -629,27 +627,27 @@ export const normalAchievements = [
   },
   {
     id: 93,
-    name: "MAXIMUM OVERDRIVE",
-    get description() { return `Big Crunch for ${format(DC.E300)} Infinity Points.`; },
+    name: "우리 할머니도 그것보다 더 빨리 뛰겠다",
+    get description() { return `한 번의 빅 크런치로 ${format(DC.E300)}개의 무한 포인트를 획득한다.`; },
     checkRequirement: () => gainedInfinityPoints().exponent >= 300,
     checkEvent: GAME_EVENT.BIG_CRUNCH_BEFORE,
-    get reward() { return `Additional ${formatX(4)} multiplier to Infinity Points.`; },
+    get reward() { return `무한 포인트를 ${formatX(4)}배 더 얻는다.`; },
     effect: 4
   },
   {
     id: 94,
-    name: "4.3333 minutes of Infinity",
-    get description() { return `Reach ${format(DC.E260)} Infinity Power.`; },
+    name: "4와 3분의 1의 무한",
+    get description() { return `${format(DC.E260)} 무한력에 도달한다.`; },
     checkRequirement: () => Currency.infinityPower.exponent >= 260,
     checkEvent: GAME_EVENT.GAME_TICK_AFTER,
-    reward: "Double Infinity Power gain.",
+    reward: "무한력을 두 배로 얻는다.",
     effect: 2
   },
   {
     id: 95,
-    name: "Is this safe?",
-    get description() { return `Gain ${format(Decimal.NUMBER_MAX_VALUE, 1, 0)} Replicanti in ${formatInt(1)} hour.`; },
-    get reward() { return `You keep your Replicanti and ${formatInt(1)} Replicanti Galaxy on Infinity.`; },
+    name: "안전한거 맞겠지?",
+    get description() { return `${formatInt(1)}시간 내로 복제자 ${format(Decimal.NUMBER_MAX_VALUE, 1, 0)}개에 도달한다.`; },
+    get reward() { return `무한에 도달해도 복제자와 복제자 은하 ${formatInt(1)}개를 잃지 않는다.`; },
     checkRequirement: () =>
       (Replicanti.amount.eq(Decimal.NUMBER_MAX_VALUE) || player.replicanti.galaxies > 0) &&
       Time.thisInfinityRealTime.totalHours <= 1,
@@ -657,47 +655,47 @@ export const normalAchievements = [
   },
   {
     id: 96,
-    name: "Time is relative",
-    description: "Go Eternal.",
+    name: "상대성 이론",
+    description: "영원에 도달한다.",
     checkRequirement: () => true,
     checkEvent: GAME_EVENT.ETERNITY_RESET_BEFORE
   },
   {
     id: 97,
-    name: "Like jumping on a lego",
-    get description() { return `Get the sum of Infinity Challenge times under ${format(6.66, 2, 2)} seconds.`; },
+    name: "레고 밟으면서 줄넘기 쌩쌩이",
+    get description() { return `무한 도전 기록의 총합을 ${format(6.66, 2, 2)}초 미만으로 만든다.`; },
     checkRequirement: () => Time.infinityChallengeSum.totalSeconds < 6.66,
     checkEvent: [GAME_EVENT.BIG_CRUNCH_AFTER, GAME_EVENT.REALITY_RESET_AFTER],
   },
   {
     id: 98,
-    name: "0 degrees from Infinity",
-    description: "Unlock the 8th Infinity Dimension.",
+    name: "무한으로부터 0도",
+    description: "제8 무한 차원을 해금한다.",
     checkRequirement: () => InfinityDimension(8).isUnlocked,
     checkEvent: GAME_EVENT.GAME_TICK_AFTER
   },
   {
     id: 101,
-    name: "8 nobody got time for that",
-    description: "Eternity without buying Antimatter Dimensions 1-7.",
+    name: "아무도 8같은 건 신경 쓸 틈이 없겠죠",
+    description: "제1-7 반물질 차원을 구매하지 않고 영원에 도달한다.",
     checkRequirement: () => player.requirementChecks.eternity.onlyAD8,
     checkEvent: GAME_EVENT.ETERNITY_RESET_BEFORE
   },
   {
     id: 102,
-    name: "This mile took an eternity",
-    description: "Get all Eternity milestones.",
+    name: "이 마일스톤까지 영원이 걸렸어",
+    description: "모든 영원 마일스톤을 달성한다.",
     checkRequirement: () => EternityMilestone.all.every(m => m.isReached),
     checkEvent: GAME_EVENT.GAME_TICK_AFTER
   },
   {
     id: 103,
-    name: "Tätä saavutusta ei ole olemassa II",
-    get description() { return `Reach ${formatPostBreak(DC.D9_99999E999, 5, 0)} Infinity Points.`; },
+    name: "Oㅣ 도JㅓN과제는 존재하ㅈ1 않습LIㄷㅏ II",
+    get description() { return `${formatPostBreak(DC.D9_99999E999, 5, 0)} 무한 포인트에 도달한다.`; },
     checkRequirement: () => Currency.infinityPoints.exponent >= 1000,
     checkEvent: GAME_EVENT.GAME_TICK_AFTER,
     get reward() {
-      return `Make the Infinity Point formula better. log(x)/${formatInt(308)} ➜ log(x)/${formatFloat(307.8, 1)}`;
+      return `무한 포인트 획득 공식이 개선된다. log(x)/${formatInt(308)} ➜ log(x)/${formatFloat(307.8, 1)}`;
     },
     effect: 307.8
   },

@@ -19,7 +19,7 @@ export default {
 <template>
   <ModalWrapperOptions class="l-wrapper">
     <template #header>
-      Away Progress Options
+      오프라인 진행 설정
     </template>
     <div class="c-modal-options__button-container">
       <AwayProgressOptionsEntry
@@ -28,7 +28,7 @@ export default {
         :name="name"
       />
     </div>
-    Note: Selected resources will only show if they've increased.
+    참고: 켜짐 표시가 되어 있는 자원들도 오프라인이었을 때 획득해야만 표시됩니다.
   </ModalWrapperOptions>
 </template>
 

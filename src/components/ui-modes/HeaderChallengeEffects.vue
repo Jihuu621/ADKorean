@@ -88,7 +88,7 @@ export default {
       Entropy: {{ laitelaEntropy }} ({{ laitelaTimer }})
     </div>
     <div v-if="isInMatterChallenge">
-      There is {{ format(matter, 2, 1) }} matter.
+      물질이 {{ format(matter, 2, 1) }}개 있습니다.
     </div>
     <div v-if="isChallengePowerVisible">
       {{ challengePower }}

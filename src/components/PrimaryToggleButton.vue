@@ -15,12 +15,12 @@ export default {
     on: {
       type: String,
       required: false,
-      default: "ON"
+      default: "켜짐"
     },
     off: {
       type: String,
       required: false,
-      default: "OFF"
+      default: "꺼짐"
     },
     value: {
       type: Boolean,

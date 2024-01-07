@@ -28,7 +28,7 @@ export default {
       return this.challenge.config;
     },
     name() {
-      return `IC${this.challenge.id}`;
+      return `무한 도전 ${this.challenge.id}`;
     }
   },
   methods: {
@@ -63,7 +63,7 @@ export default {
         <span>목표: {{ format(config.goal) }} 반물질</span>
         <DescriptionDisplay
           :config="config.reward"
-          title="Reward:"
+          title="보상:"
         />
         <EffectDisplay
           v-if="isCompleted"

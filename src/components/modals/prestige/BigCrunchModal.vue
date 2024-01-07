@@ -28,7 +28,7 @@ export default {
               또한, 통계 탭에도 새로운 '무한' 통계가 표시됩니다.`;
     },
     ipGainInfo() {
-      return `당신은 무한 ${this.gainedInfinities}번과 무한 포인트 ${this.gainedInfinityPoints}개를 얻게 됩니다.`;
+      return `당신은 무한 ${this.gainedInfinities}번과 ${quantify("IP", this.gainedInfinityPoints, 2)}를 얻게 됩니다.`;
     },
     startingResources() {
       const gainedResources = [];

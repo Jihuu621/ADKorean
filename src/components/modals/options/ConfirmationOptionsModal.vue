@@ -22,12 +22,12 @@ export default {
 <template>
   <ModalWrapperOptions class="c-modal-options__large">
     <template #header>
-      Confirmation Options
+      재확인 설정
     </template>
     <div class="c-modal-options__button-container">
       <span v-if="noConfirmations">
-        You do not have anything that requires confirmation,
-        but if you did it would appear here.
+        현재 재확인 가능한 옵션이 없습니다.
+        게임의 진행도에 따라 탭이 추가됩니다.
       </span>
       <ConfirmationOptionsEntry
         v-for="entryNumber in count"

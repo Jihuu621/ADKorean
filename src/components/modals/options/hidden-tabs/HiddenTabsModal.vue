@@ -29,24 +29,24 @@ export default {
 <template>
   <ModalWrapperOptions class="l-wrapper">
     <template #header>
-      Modify Visible Tabs
+      탭 설정
     </template>
     <div class="c-modal--short">
-      Click a button to toggle showing a tab on/off.
+      버튼을 눌러 탭의 켜기/끄기 설정을 바꿀 수 있습니다.
       <br>
-      Some tabs cannot be hidden, and you cannot hide your current tab.
+      몇몇 탭들은 숨길 수 없으며, 현재 탭은 숨길 수 없습니다.
       <br>
-      Unhiding a tab in which all subtabs are hidden will also unhide all subtabs,
-      and hiding all subtabs will also hide the tab.
+      탭을 숨기면 하위의 서브탭들이 전부 숨겨지고,
+      탭을 다시 보이게 하면 하위의 서브탭들도 전부 나타납니다.
       <br>
       <div v-if="isAlmostEnd">
-        You cannot hide your tabs after unlocking the Galaxy Generator.
+       은하 생성기를 해금한 이후에는 탭을 숨길 수 없습니다!
       </div>
       <div v-if="isEnslaved">
         <br>
-        <i>You must... see everywhere...</i>
+        <i style="color:orange;">넌... 모든 곳을 보아야 한다...</i>
         <br>
-        (You cannot hide your tabs within this Reality)
+        (이름없는 자들의 현실에서는 탭을 숨길 수 없습니다..)
       </div>
       <HiddenTabGroup
         v-for="(tab, index) in tabs"

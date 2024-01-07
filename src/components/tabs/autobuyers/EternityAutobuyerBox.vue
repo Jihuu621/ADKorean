@@ -128,7 +128,7 @@ export default {
           type="checkbox"
           class="o-clickable"
         >
-        Dynamic amount
+         자동 조절
       </label>
     </template>
   </AutobuyerBox>

@@ -92,7 +92,7 @@ export default {
         class="o-primary-btn--subtab-option"
         @click="maxAll"
       >
-        Max all
+       최대 구매
       </PrimaryButton>
       <PrimaryButton
         v-if="isAnyAutobuyerUnlocked && !isEC8Running"
@@ -104,22 +104,13 @@ export default {
     </div>
     <div>
       <p>
-        You have
+        무한력을
         <span class="c-infinity-dim-description__accent">{{ format(infinityPower, 2, 1) }}</span>
-        Infinity Power,
-        <br>
-        <span v-if="!isEC9Running">
-          increased by
-          <span class="c-infinity-dim-description__accent">{{ formatPow(conversionRate, 2, 3) }}</span>
-        </span>
-        <span v-else>
-          translated
-        </span>
-        to a
-        <span class="c-infinity-dim-description__accent">{{ formatX(dimMultiplier, 2, 1) }}</span>
-        multiplier on all
-        <span v-if="!isEC9Running">Antimatter Dimensions.</span>
-        <span v-else>Time Dimensions due to Eternity Challenge 9.</span>
+        만큼 보유 중이며,
+        <br>  
+        <span v-if="!isEC9Running">반물질 차원을</span>     
+        <span v-else>시간 차원을 (영원 도전 9)</span>
+        <span class="c-infinity-dim-description__accent">{{ formatX(dimMultiplier, 2, 1) }}</span>배 가속중입니다.
       </p>
     </div>
     <div
@@ -145,10 +136,9 @@ export default {
       All Infinity Dimensions are limited to a single purchase.
     </div>
     <div v-else>
-      All Infinity Dimensions except for the 8th are limited to a maximum of {{ format(totalDimCap, 2) }}
-      purchases each.
+      제8 무한 차원을 제외한 모든 무한 차원은 최대 {{ format(totalDimCap, 2) }}번까지만 구매할 수 있습니다.
     </div>
-    <div>You are getting {{ format(powerPerSecond, 2, 0) }} {{ incomeType }} per second.</div>
+    <div>초당 {{ format(powerPerSecond, 2, 0) }} 무한력을 얻고 있습니다.</div>
     <b
       v-if="isEC8Running"
       class="l-infinity-dim-tab__ec8-purchases"

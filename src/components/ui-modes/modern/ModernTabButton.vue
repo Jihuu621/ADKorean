@@ -136,6 +136,10 @@ export default {
   background-color: var(--color-celestials);
 }
 
+.o-tab-btn--korean::before {
+  background-color: var(--color-korean);
+}
+
 .o-subtab-btn--active {
   border-bottom-width: 0.5rem;
 }

@@ -130,13 +130,13 @@ export default {
         빅 크런치를 해
         <span :style="amountStyle">{{ format(gainedIP, 2) }}</span>
         <span v-if="showIPRate"> IP 얻기</span>
-        <span v-else> {{ gainedIP }}</span>
+        <span v-else> IP 얻기</span>
       </b>
       <template v-if="showIPRate">
         <br>
-        현재: {{ format(currentIPRate, 2) }} IP/min
+        현재: {{ format(currentIPRate, 2) }} IP/분
         <br>
-        최대: {{ format(peakIPRate, 2) }} IP/min
+        최대: {{ format(peakIPRate, 2) }} IP/분
         <br>
         {{ format(peakIPRateVal, 2) }} IP에서
       </template>

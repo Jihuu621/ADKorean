@@ -82,6 +82,7 @@ html {
   --color-reality-light: #d5ffd7;
   --color-reality-dark: #0a790c;
   --color-celestials: #5151ec;
+  --color-korean: #ffbbbb;
   --color-prestige--accent: white;
 
   --color-teresa--base: #5151ec;
@@ -123,6 +124,7 @@ html {
   --color-reality: #3a823d;
   --color-reality-light: #d5ffd7;
   --color-celestials: #00bcd4;
+  --color-korean: #ffbbbb;
 }
 
 :root .t-dark {
@@ -161,6 +163,7 @@ html {
   --color-reality: #4caf50;
   --color-reality-dark: #0ba00e;
   --color-celestials: #00bcd4;
+  --color-korean: #ffbbbb;
   --color-prestige--accent: black;
 
   --color-teresa--accent: black;
@@ -201,6 +204,7 @@ html {
   --color-reality: #4caf50;
   --color-reality-dark: #0ba00e;
   --color-celestials: #00bcd4;
+  --color-korean: #ffbbbb;
   --color-prestige--accent: black;
 
   --color-teresa--accent: black;
@@ -225,6 +229,7 @@ html {
   --color-reality-light: #e8e3e4;
   --color-reality-dark: #7a7273;
   --color-celestials: #f2d6c1;
+  --color-korean: #ffbbbb;
   --color-prestige--accent: #dbd242;
 
   --color-pelle--base: #7cb727;
@@ -752,6 +757,16 @@ button:focus {
 
 .o-tab-btn--celestial:hover {
   background: var(--color-celestials);
+}
+
+.o-tab-btn--korean {
+  color: var(--color-korean);
+  background-color: var(--color-prestige--accent);
+  border-color: var(--color-korean);
+}
+
+.o-tab-btn--korean:hover {
+  background: var(--color-korean);
 }
 
 /* #endregion tab buttons */
@@ -9094,6 +9109,15 @@ input.o-automator-block-input {
 
 .c-hide-modal-tab-button--celestials:hover {
   background: var(--color-celestials);
+}
+
+.c-hide-modal-tab-button--korean {
+  color: var(--color-korean);
+  border-color: var(--color-korean);
+}
+
+.c-hide-modal-tab-button--korean:hover {
+  background: var(--color-korean);
 }
 
 /* Prevent any themes overriding font awesome */

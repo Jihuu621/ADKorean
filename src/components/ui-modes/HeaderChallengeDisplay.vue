@@ -177,7 +177,7 @@ export default {
       else Tab.celestials[celestial].show(true);
     },
     exitDisplay() {
-      if (Player.isInAnyChallenge) return player.options.retryChallenge ? "Retry Challenge" : "Exit Challenge";
+      if (Player.isInAnyChallenge) return player.options.retryChallenge ? "도전 재시작" : "도전 나가기";
       if (player.dilation.active) return "Exit Dilation";
       if (this.resetCelestial) return "Restart Reality";
       return "Exit Reality";

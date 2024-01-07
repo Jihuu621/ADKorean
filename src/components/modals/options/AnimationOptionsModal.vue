@@ -97,40 +97,40 @@ export default {
 <template>
   <ModalWrapperOptions class="c-modal-options__large">
     <template #header>
-      Animation Options
+      애니메이션 설정
     </template>
     <div class="c-modal-options__button-container">
       <ModalOptionsToggleButton
         v-if="infinityUnlocked"
         v-model="bigCrunch"
-        text="Big Crunch:"
+        text="빅 크런치:"
       />
       <ModalOptionsToggleButton
         v-if="eternityUnlocked"
         v-model="eternity"
-        text="Eternity:"
+        text="영원:"
       />
       <ModalOptionsToggleButton
         v-if="dilationUnlocked"
         v-model="dilation"
-        text="Dilation:"
+        text="시간 팽창:"
       />
       <ModalOptionsToggleButton
         v-if="tachyonsUnlocked"
         v-model="tachyonParticles"
-        text="Tachyon particles:"
+        text="타키온 입자:"
       />
       <ModalOptionsToggleButton
         v-if="realityUnlocked"
         v-model="reality"
-        text="Reality:"
+        text="현실:"
       />
       <div v-if="!isS11Active">
         <ModalOptionsToggleButton
           v-if="animatedThemeUnlocked"
           v-model="background"
           onclick="Themes.find(Theme.currentName()).set();"
-          text="Background:"
+          text="배경:"
         />
       </div>
       <div v-else>
@@ -138,7 +138,7 @@ export default {
           v-if="animatedThemeUnlocked"
           v-model="background"
           onclick="Themes.find(Theme.currentName()).set();"
-          text="Blobsnow:"
+          text="블롭 눈:"
         />
       </div>
       <div

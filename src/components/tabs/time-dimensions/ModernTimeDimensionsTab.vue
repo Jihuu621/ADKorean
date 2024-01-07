@@ -54,7 +54,7 @@ export default {
         class="o-primary-btn--subtab-option"
         @click="maxAll"
       >
-        Max all
+        최대 구매
       </PrimaryButton>
       <PrimaryButton
         v-if="areAutobuyersUnlocked"

@@ -98,18 +98,17 @@ export default {
     </div>
     <div>
       <p>
-        You have
+        무한력을
         <span class="c-infinity-dim-description__accent">{{ format(infinityPower, 2, 1) }}</span>
-        Infinity Power,
+        만큼 보유 중이며,
         <br>
         <span v-if="!isEC9Running">
-          increased by
+          전환?
           <span class="c-infinity-dim-description__accent">{{ formatPow(conversionRate, 2, 3) }}</span>
         </span>
         <span v-else>
-          translated
+          되어서
         </span>
-        to a
         <span class="c-infinity-dim-description__accent">{{ formatX(dimMultiplier, 2, 1) }}</span>
         multiplier on all
         <span v-if="!isEC9Running">Antimatter Dimensions.</span>

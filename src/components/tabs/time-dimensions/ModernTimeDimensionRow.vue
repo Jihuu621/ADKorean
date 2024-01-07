@@ -151,7 +151,7 @@ export default {
         v-if="areAutobuyersUnlocked"
         v-model="isAutobuyerOn"
         class="o-primary-btn--buy-td-auto"
-        label="Auto:"
+        label="자동:"
       />
       <PrimaryButton
         v-else

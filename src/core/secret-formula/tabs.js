@@ -480,18 +480,18 @@ export const tabs = [
   },
   {
     key: "shop",
-    name: "Shop",
-    newUIClass: "shop",
+    name: "한글 패치",
+    UIClass: "o-tab-btn--korean",
     hideAt: 1.5,
-    condition: () => Cloud.isAvailable,
+    condition: () => true,
     id: 10,
     hidable: true,
     subtabs: [
       {
         key: "shop",
-        name: "Shop",
-        symbol: "$",
-        component: "ShopTab",
+        name: "크레딧",
+        symbol: "한",
+        component: "KRTab",
         id: 0,
         hidable: true
       }

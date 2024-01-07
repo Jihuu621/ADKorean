@@ -54,7 +54,7 @@ export default {
       this.theme = Theme.currentName();
       this.notation = options.notation;
       this.sidebarResource = player.options.sidebarResourceID === 0
-        ? "Latest Resource"
+        ? "최근 자원"
         : this.sidebarDB.find(e => e.id === player.options.sidebarResourceID).optionName;
       this.headerTextColored = options.headerTextColored;
     },
@@ -77,7 +77,7 @@ export default {
           class="o-primary-btn--option"
           onclick="Modal.newsOptions.show();"
         >
-          Open News Options
+          뉴스 메뉴 열기
         </OptionsButton>
       </div>
       <div class="l-options-grid__row">
@@ -103,7 +103,7 @@ export default {
           class="o-primary-btn--option"
           onclick="Modal.notation.show();"
         >
-          Open Exponent Notation Options
+          지수 표기법 메뉴 열기
         </OptionsButton>
       </div>
       <div class="l-options-grid__row">
@@ -111,19 +111,19 @@ export default {
           class="o-primary-btn--option"
           onclick="Modal.animationOptions.show();"
         >
-          Open Animation Options
+          애니메이션 메뉴 열기
         </OptionsButton>
         <OptionsButton
           class="o-primary-btn--option"
           onclick="Modal.infoDisplayOptions.show()"
         >
-          Open Info Display Options
+          정보 디스플레이 메뉴 열기
         </OptionsButton>
         <OptionsButton
           class="o-primary-btn--option"
           onclick="Modal.awayProgressOptions.show()"
         >
-          Open Away Progress Options
+          오프라인 진행 메뉴 열기
         </OptionsButton>
       </div>
       <div class="l-options-grid__row">
@@ -131,12 +131,12 @@ export default {
           class="o-primary-btn--option"
           onclick="Modal.hiddenTabs.show()"
         >
-          Modify Visible Tabs
+          탭 설정 메뉴 열기
         </OptionsButton>
         <PrimaryToggleButton
           v-model="headerTextColored"
           class="o-primary-btn--option l-options-grid__button"
-          label="Relative prestige gain text coloring:"
+          label="상대적 리셋 레이어 획득 텍스트 색상:"
         />
         <ExpandingControlBox
           v-if="$viewModel.newUI"

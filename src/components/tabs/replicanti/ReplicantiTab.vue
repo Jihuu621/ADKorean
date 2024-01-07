@@ -49,7 +49,7 @@ export default {
       return new ReplicantiUpgradeButtonSetup(
         ReplicantiUpgrade.chance,
         value => `복제 확률: ${formatPercents(value)}`,
-        cost => `+${formatPercents(0.01)} 가격: ${format(cost)} 무한 포인트`
+        cost => `가격: ${format(cost)} 무한 포인트`
       );
     },
     replicantiIntervalSetup() {
@@ -72,9 +72,9 @@ export default {
       }
       return new ReplicantiUpgradeButtonSetup(
         upgrade,
-        value => `복제 간격: ${formatInterval(value)}`,
+        value => `복제 간격: ${formatInterval(value)} ➜ ${formatInterval(upgrade.nextValue)} `,
         cost =>
-          `➜ ${formatInterval(upgrade.nextValue)} 가격: ${format(cost)} 무한 포인트`
+        `가격: ${format(cost)} 무한 포인트`
       );
     },
     maxGalaxySetup() {
@@ -92,29 +92,25 @@ export default {
           }
           return description;
         },
-        cost => `+${formatInt(1)} 가격: ${format(cost)} 무한 포인트`
+        cost => `가격: ${format(cost)} 무한 포인트`
       );
     },
     boostText() {
       const boostList = [];
-      boostList.push(`a <span class="c-replicanti-description__accent">${formatX(this.mult, 2, 2)}</span>
-        multiplier on all Infinity Dimensions`);
+      boostList.push(`모든 무한 차원에 <span class="c-replicanti-description__accent">${formatX(this.mult, 2, 2)}</span> 배율이 적용됩니다`);
       if (this.hasTDMult) {
-        boostList.push(`a <span class="c-replicanti-description__accent">${formatX(this.multTD, 2, 2)}</span>
-          multiplier on all Time Dimensions from a Dilation Upgrade`);
+        boostList.push(`모든 시간 차원에 <span class="c-replicanti-description__accent">${formatX(this.multTD, 2, 2)}</span> 배율이 적용됩니다`);
       }
       if (this.hasDTMult) {
-        const additionalEffect = GlyphAlteration.isAdded("replication") ? "and Replicanti speed " : "";
-        boostList.push(`a <span class="c-replicanti-description__accent">${formatX(this.multDT, 2, 2)}</span>
-          multiplier to Dilated Time ${additionalEffect}from Glyphs`);
+        const additionalEffect = GlyphAlteration.isAdded("replication") ? "Replicanti speed " : "";
+        boostList.push(`팽창된 시간의 생산량에 <span class="c-replicanti-description__accent">${formatX(this.multDT, 2, 2)}</span> 배율이 적용됩니다`);
       }
       if (this.hasIPMult) {
-        boostList.push(`a <span class="c-replicanti-description__accent">${formatX(this.multIP)}</span>
-          multiplier to Infinity Points from Glyph Alchemy`);
+        boostList.push(`무한 포인트의 생산량에 <span class="c-replicanti-description__accent">${formatX(this.multIP)}</span> 배율이 적용됩니다`);
       }
       if (boostList.length === 1) return `${boostList[0]}.`;
-      if (boostList.length === 2) return `${boostList[0]}<br> and ${boostList[1]}.`;
-      return `${boostList.slice(0, -1).join(",<br>")},<br> and ${boostList[boostList.length - 1]}.`;
+      if (boostList.length === 2) return `${boostList[0]}<br> ${boostList[1]}.`;
+      return `${boostList.slice(0, -1).join(",<br>")},<br> ${boostList[boostList.length - 1]}.`;
     },
     hasMaxText: () => PlayerProgress.realityUnlocked() && !Pelle.isDoomed,
     toMaxTooltip() {
@@ -195,9 +191,9 @@ export default {
       class="o-primary-btn--replicanti-unlock"
       onclick="Replicanti.unlock();"
     >
-      Unlock Replicanti
+      복제자 해금하기
       <br>
-      Cost: {{ format(unlockCost) }} IP
+      가격: {{ format(unlockCost) }} 무한 포인트
     </PrimaryButton>
     <template v-else>
       <div
@@ -219,9 +215,9 @@ export default {
         (Next Replicanti Galaxy at {{ format(nextEffarigRGThreshold, 2) }} cap)
       </div>
       <p class="c-replicanti-description">
-        You have
+        복제자
         <span class="c-replicanti-description__accent">{{ format(amount, 2, 0) }}</span>
-        Replicanti, translated to
+        개를 보유하고 있습니다.
         <br>
         <span v-html="boostText" />
       </p>
@@ -245,10 +241,10 @@ export default {
         <ReplicantiUpgradeButton :setup="maxGalaxySetup" />
       </div>
       <div>
-        The Max Replicanti Galaxy upgrade can be purchased endlessly, but costs increase
+        최대 복제자 은하 업그레이드는 무한히 구매할 수 있지만,
         <br>
-        more rapidly above {{ formatInt(distantRG) }} Replicanti Galaxies
-        and even more so above {{ formatInt(remoteRG) }} Replicanti Galaxies.
+        복제자 은하가 {{ formatInt(distantRG) }}개 이상이 되면 가격이 더욱 빠르게 상승하고
+        {{ formatInt(remoteRG) }}개 이상이 되면 기하급수적으로 가격이 상승합니다.
       </div>
       <br><br>
       <ReplicantiGainText />
