@@ -35,7 +35,7 @@ export default {
     },
     goalDisplay() {
       const config = this.config;
-      let goal = `Goal: ${this.goalAtCompletions(this.completions)} IP`;
+      let goal = `목표: ${this.goalAtCompletions(this.completions)} IP`;
       if (config.restriction) {
         goal += ` ${config.formatRestriction(config.restriction(this.completions))}`;
       }
@@ -63,7 +63,7 @@ export default {
       };
     },
     name() {
-      return `EC${this.challenge.id}`;
+      return `영원 도전 ${this.challenge.id}`;
     }
   },
   methods: {
@@ -108,15 +108,15 @@ export default {
     <template #bottom>
       <div :style="{ visiblity: completions < 5 ? 'visible' : 'hidden' }">
         <div>
-          Completed {{ quantifyInt("time", completions) }}
+          {{ completions }}번 완료함
         </div>
         {{ goalDisplay }}
       </div>
       <span v-if="showGoalSpan">
-        Goal Span: {{ firstGoal }} IP - {{ lastGoal }} IP
+        목표: {{ firstGoal }} IP - {{ lastGoal }} IP
       </span>
       <span>
-        Reward:
+        보상:
         <DescriptionDisplay
           :config="config.reward"
           :length="55"
@@ -132,7 +132,7 @@ export default {
         <EffectDisplay
           v-if="completions < 5"
           :config="nextRewardConfig"
-          label="Next"
+          label="다음"
           :ignore-capped="true"
         />
       </span>

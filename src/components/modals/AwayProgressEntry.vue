@@ -69,7 +69,7 @@ export default {
     },
     formatBlackHoleActivations() {
       const activations = this.after - this.before;
-      return quantifyInt("time", activations);
+      return activations;
     },
     isVeryLarge() {
       return this.isBlackHole
@@ -108,16 +108,17 @@ export default {
     @click="hideEntry"
   >
     <span v-if="isBlackHole">
-      Your
+      당신의
       <b>{{ formattedName }}</b>
-      activated
+      이(가)
       {{ formatBlackHoleActivations }}
+      만큼 작동했습니다.
     </span>
     <span v-else>
       <b>{{ formattedName }}</b>
       <i v-if="isVeryLarge"> exponent</i>
-      increased from
-      {{ formatBefore }} to {{ formatAfter }}
+      이(가)
+      {{ formatBefore }}에서 {{ formatAfter }}로 증가했습니다.
     </span>
   </div>
 </template>

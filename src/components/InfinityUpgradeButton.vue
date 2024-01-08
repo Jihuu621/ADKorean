@@ -123,7 +123,7 @@ export default {
       />
       <template v-if="!isDisabled && isImprovedByTS31">
         <br>
-        After TS31: {{ formatX(ts31Effect, 2, 2) }}
+        시간 연구 31 이후: {{ formatX(ts31Effect, 2, 2) }}
       </template>
     </span>
     <CostDisplay

@@ -110,7 +110,7 @@ export default {
     </template>
     <template #menu>
       <div class="l-tt-save-load-btn__menu c-tt-save-load-btn__menu">
-        <span ach-tooltip="Set a custom name (up to 4 ASCII characters)">
+        <span ach-tooltip="프리셋 이름 짓기 (영문 및 숫자 4글자)">
           <input
             type="text"
             size="4"
@@ -125,26 +125,26 @@ export default {
           class="l-tt-save-load-btn__menu-item c-tt-save-load-btn__menu-item"
           @click="edit"
         >
-          Edit
+          편집
         </div>
         <div
           class="l-tt-save-load-btn__menu-item c-tt-save-load-btn__menu-item"
           @click="handleExport"
         >
-          Export
+          내보내기
         </div>
         <div
           class="l-tt-save-load-btn__menu-item c-tt-save-load-btn__menu-item"
           @click="save"
         >
-          Save
+          저장
         </div>
         <div class="l-tt-save-load-btn__menu-item">
           <div
             class="c-tt-save-load-btn__menu-item"
             @click="load"
           >
-            Load
+            불러오기
           </div>
           <div class="c-tt-save-load-btn__menu-item__hover-options">
             <div
@@ -154,7 +154,7 @@ export default {
               }"
               @click="respecAndLoad"
             >
-              Respec and Load
+              리셋 후 불러오기
             </div>
           </div>
         </div>
@@ -162,7 +162,7 @@ export default {
           class="l-tt-save-load-btn__menu-item c-tt-save-load-btn__menu-item"
           @click="deletePreset"
         >
-          Delete
+          삭제하기
         </div>
       </div>
     </template>
@@ -189,7 +189,7 @@ export default {
 
 .c-tt-save-load-btn__menu {
   text-align: left;
-  font-family: Typewriter;
+  font-family: "맑은 고딕";
   font-size: 1.4rem;
   font-weight: bold;
   color: white;
@@ -214,7 +214,7 @@ export default {
 
 .c-tt-save-load-btn__menu-rename {
   text-align: left;
-  font-family: Typewriter;
+  font-family: "맑은 고딕";
   font-size: 1.4rem;
   font-weight: bold;
   border: none;

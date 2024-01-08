@@ -186,10 +186,10 @@ export class TimeStudySetup {
       v-if="showDefaultCostDisplay"
       br
       :config="config"
-      name="Time Theorem"
+      name="시간 정리"
     />
     <div v-else-if="!doomedRealityStudy">
-      Cost: {{ customCostStr }}
+      가격: {{ customCostStr }}
     </div>
   </button>
 </template>

@@ -69,7 +69,7 @@ export default {
         @something-happened="somethingHappened = true"
       />
     </div>
-    <span v-if="!nothingHappened && somethingHappened">Note: Click an entry to hide it in the future.</span>
+    <span v-if="!nothingHappened && somethingHappened">참고: 자원 설명을 클릭하면 이후에는 해당 자원의 증가 여부가 표시되지 않습니다.</span>
   </ModalWrapper>
 </template>
 

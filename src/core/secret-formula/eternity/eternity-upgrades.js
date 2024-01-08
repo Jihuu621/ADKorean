@@ -4,15 +4,15 @@ export const eternityUpgrades = {
   idMultEP: {
     id: 1,
     cost: 5,
-    description: () => `Infinity Dimensions multiplier based on unspent Eternity Points (x+${formatInt(1)})`,
+    description: () => `보유중인 EP에 비례하여 무한 차원에 배율이 적용됩니다. (x+${formatInt(1)})`,
     effect: () => Currency.eternityPoints.value.plus(1),
     formatEffect: value => formatX(value, 2, 1)
   },
   idMultEternities: {
     id: 2,
     cost: 10,
-    description: () => `Infinity Dimension multiplier based on Eternities
-      ((x/${formatInt(200)})^log4(${formatInt(2)}x), softcap at ${format(1e5)} Eternities)`,
+    description: () => `무한 차원이 영원 횟수에 비례하여 배율을 받습니다.
+      ((x/${formatInt(200)})^log4(${formatInt(2)}x), 영원 횟수 ${format(1e5)}번 이후 소프트캡 적용)`,
     effect() {
       const log4 = Math.log4;
       const eterPreCap = Currency.eternities.value.clampMax(1e5).toNumber();
@@ -30,7 +30,7 @@ export const eternityUpgrades = {
   idMultICRecords: {
     id: 3,
     cost: 5e4,
-    description: "Infinity Dimensions multiplier based on sum of Infinity Challenge times",
+    description: "무한 도전 기록의 합계에 따라 무한 차원에 배율이 적용됩니다.",
     // The cap limits this at a lower value, but we also need an explicit cap here because very old versions have
     // allowed EC12 to make all the challenge records sum to zero (causing a division by zero here)
     effect: () => DC.D2.pow(30 / Math.clampMin(Time.infinityChallengeSum.totalSeconds, 0.1)),
@@ -40,14 +40,14 @@ export const eternityUpgrades = {
   tdMultAchs: {
     id: 4,
     cost: 1e16,
-    description: "Your Achievement bonus affects Time Dimensions",
+    description: "도전과제 배율이 시간 차원을 증폭합니다.",
     effect: () => Achievements.power,
     formatEffect: value => formatX(value, 2, 1)
   },
   tdMultTheorems: {
     id: 5,
     cost: 1e40,
-    description: "Time Dimensions are multiplied by your unspent Time Theorems",
+    description: "보유중인 시간 정리에 비례하여 시간 차원을 증폭합니다.",
     effect: () => Decimal.max(Currency.timeTheorems.value, 1),
     formatEffect: value => formatX(value, 2, 1)
   },
@@ -55,8 +55,8 @@ export const eternityUpgrades = {
     id: 6,
     cost: 1e50,
     description: () => (Pelle.isDoomed
-      ? "Time Dimensions are multiplied by days played in this Armageddon"
-      : "Time Dimensions are multiplied by days played"
+      ? "이번 아마겟돈에서 플레이한 일수에 비례하여 시간 차원을 증폭합니다."
+      : "게임을 플레이한 일수에 비례하여 시간 차원을 증폭합니다."
     ),
     effect: () => (Pelle.isDoomed ? 1 + Time.thisReality.totalDays : Math.max(Time.totalTimePlayed.totalDays, 1)),
     formatEffect: value => formatX(value, 2, 1)

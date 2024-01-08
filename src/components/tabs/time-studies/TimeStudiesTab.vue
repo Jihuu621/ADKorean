@@ -141,19 +141,19 @@ export default {
         class="o-primary-btn--subtab-option"
         @click="exportStudyTree"
       >
-        Export tree
+        트리 내보내기
       </PrimaryButton>
       <PrimaryButton
         :class="respecClassObject"
         @click="respec = !respec"
       >
-        Respec Time Studies on next Eternity
+        다음 영원에서 시간 연구 리셋하기
       </PrimaryButton>
       <PrimaryButton
         class="o-primary-btn--subtab-option"
         onclick="Modal.studyString.show({ id: -1 })"
       >
-        Import tree
+        트리 가져오기
       </PrimaryButton>
     </div>
     <div

@@ -7,7 +7,7 @@ export const ecTimeStudies = [
     requirement: [171],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     secondary: {
-      resource: "Eternities",
+      resource: "영원 횟수",
       current: () => Currency.eternities.value,
       required: completions => new Decimal(20000 + Math.min(completions, Enslaved.isRunning ? 999 : 4) * 20000),
       formatValue: formatInt
@@ -19,7 +19,7 @@ export const ecTimeStudies = [
     requirement: [171],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     secondary: {
-      resource: "Tickspeed upgrades from Time Dimensions",
+      resource: "시간 파편으로 얻은 틱스피드 업그레이드",
       current: () => player.totalTickGained,
       required: completions => 1300 + Math.min(completions, 4) * 150,
       formatValue: formatInt
@@ -31,7 +31,7 @@ export const ecTimeStudies = [
     requirement: [171],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     secondary: {
-      resource: "8th Antimatter Dimensions",
+      resource: "제8 반물질 차원",
       current: () => AntimatterDimension(8).totalAmount,
       required: completions => new Decimal(17300 + Math.min(completions, 4) * 1250),
       formatValue: value => formatInt(Math.floor(value.toNumber()))
@@ -43,7 +43,7 @@ export const ecTimeStudies = [
     requirement: [143],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     secondary: {
-      resource: "Infinities",
+      resource: "무한 횟수",
       current: () => Currency.infinitiesTotal.value,
       required: completions => new Decimal(1e8 + Math.min(completions, 4) * 2.5e7),
       formatValue: value => formatInt(Math.floor(value.toNumber()))
@@ -55,7 +55,7 @@ export const ecTimeStudies = [
     requirement: [42],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     secondary: {
-      resource: "Antimatter Galaxies",
+      resource: "반물질 은하",
       current: () => player.galaxies,
       required: completions => 160 + Math.min(completions, 4) * 14,
       formatValue: formatInt
@@ -67,7 +67,7 @@ export const ecTimeStudies = [
     requirement: [121],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     secondary: {
-      resource: "Replicanti Galaxies",
+      resource: "복제자 은하",
       current: () => player.replicanti.galaxies,
       required: completions => 40 + Math.min(completions, 4) * 5,
       formatValue: formatInt
@@ -79,7 +79,7 @@ export const ecTimeStudies = [
     requirement: [111],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     secondary: {
-      resource: "antimatter",
+      resource: "반물질",
       current: () => Currency.antimatter.value,
       required: completions => DC.E300000.pow(Math.min(completions, 4)).times(DC.E500000),
       formatValue: value => format(value)
@@ -91,7 +91,7 @@ export const ecTimeStudies = [
     requirement: [123],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     secondary: {
-      resource: "Infinity Points",
+      resource: "무한 포인트",
       current: () => Currency.infinityPoints.value,
       required: completions => DC.E1000.pow(Math.min(completions, 4)).times(DC.E4000),
       formatValue: value => format(value)
@@ -103,7 +103,7 @@ export const ecTimeStudies = [
     requirement: [151],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     secondary: {
-      resource: "Infinity Power",
+      resource: "무한력",
       current: () => Currency.infinityPower.value,
       required: completions => DC.E2000.pow(Math.min(completions, 4)).times(DC.E17500),
       formatValue: value => format(value)
@@ -115,7 +115,7 @@ export const ecTimeStudies = [
     requirement: [181],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     secondary: {
-      resource: "Eternity Points",
+      resource: "영원 포인트",
       current: () => Currency.eternityPoints.value,
       required: completions => DC.E20.pow(Math.min(completions, 4)).times(DC.E100),
       formatValue: value => format(value)
@@ -127,7 +127,7 @@ export const ecTimeStudies = [
     requirement: [231, 232],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     secondary: {
-      path: "Antimatter Dimension",
+      path: "반물질 차원",
       forbiddenStudies: [72, 73],
     }
   },
@@ -137,7 +137,7 @@ export const ecTimeStudies = [
     requirement: [233, 234],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     secondary: {
-      path: "Time Dimension",
+      path: "시간 차원",
       forbiddenStudies: [71, 72],
     }
   }

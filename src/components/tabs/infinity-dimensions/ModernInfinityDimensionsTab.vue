@@ -99,7 +99,7 @@ export default {
         class="o-primary-btn--subtab-option"
         @click="toggleAllAutobuyers"
       >
-        Toggle all autobuyers
+        전체 자동구매기 토글
       </PrimaryButton>
     </div>
     <div>

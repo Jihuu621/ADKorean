@@ -81,23 +81,23 @@ export default {
       type="studies"
       class="l-hint-text--time-study"
     >
-      EC{{ id }}
+      영원 도전 {{ id }}
     </HintText>
-    Eternity Challenge {{ id }}
+    영원 도전 {{ id }}
     ({{ formatInt(completions) }}<span v-if="showTotalCompletions">/{{ formatInt(5) }}</span>)
     <template v-if="hasRequirement">
       <br>
-      Requirement:
+      조건:
       <br v-if="needsFirstLinebreak">
-      <span v-if="config.secondary.path">Use only the {{ config.secondary.path }} path</span>
+      <span v-if="config.secondary.path">{{ config.secondary.path }} 경로만 사용</span>
       <span v-else>
         {{ formatValue(requirement.current) }}/{{ formatValue(requirement.total) }}
         <br v-if="needsSecondLinebreak">
         {{ config.secondary.resource }}
       </span>
     </template>
-    <span v-if="isUnlocked && !isRunning"><br>Double click to start</span>
-    <span v-else-if="isRunning"><br>Currently Running</span>
+    <span v-if="isUnlocked && !isRunning"><br>더블 클릭하여 시작</span>
+    <span v-else-if="isRunning"><br>현재 실행중</span>
   </TimeStudyButton>
 </template>
 

@@ -77,14 +77,14 @@ export default {
     },
     buttonText() {
       if (this.overrideLabel.length) return this.overrideLabel;
-      if (this.isRunning) return "Running";
+      if (this.isRunning) return "실행중";
       if (this.isCompleted) {
-        if (this.isUnlocked) return "Redo";
-        return "Completed";
+        if (this.isUnlocked) return "재도전";
+        return "완료";
       }
-      if (this.isUnlocked) return "Start";
-      if (this.canBeUnlocked) return "Unlock";
-      return "Locked";
+      if (this.isUnlocked) return "시작";
+      if (this.canBeUnlocked) return "해금";
+      return "잠김";
     }
   }
 };
