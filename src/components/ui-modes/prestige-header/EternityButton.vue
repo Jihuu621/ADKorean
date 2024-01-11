@@ -210,7 +210,7 @@ const EP_BUTTON_DISPLAY_TYPE = {
       영원에 도달하여
       <span :style="amountStyle">{{ format(gainedEP, 2) }}</span>
       <span v-if="showEPRate"> EP 얻기</span>
-      <span v-else> Eternity {{ pluralize("Point", gainedEP) }}</span>
+      <span v-else> EP 얻기</span>
       <br>
       <template v-if="showEPRate">
         현재: {{ format(currentEPRate, 2, 2) }} EP/min

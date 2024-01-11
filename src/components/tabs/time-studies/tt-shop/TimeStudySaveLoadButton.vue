@@ -130,6 +130,7 @@ export default {
         <div
           class="l-tt-save-load-btn__menu-item c-tt-save-load-btn__menu-item"
           @click="handleExport"
+          style="font-size:small"
         >
           내보내기
         </div>
@@ -144,7 +145,7 @@ export default {
             class="c-tt-save-load-btn__menu-item"
             @click="load"
           >
-            불러오기
+            로드
           </div>
           <div class="c-tt-save-load-btn__menu-item__hover-options">
             <div
@@ -154,7 +155,7 @@ export default {
               }"
               @click="respecAndLoad"
             >
-              리셋 후 불러오기
+              리셋 후 로드
             </div>
           </div>
         </div>
@@ -162,7 +163,7 @@ export default {
           class="l-tt-save-load-btn__menu-item c-tt-save-load-btn__menu-item"
           @click="deletePreset"
         >
-          삭제하기
+          삭제
         </div>
       </div>
     </template>

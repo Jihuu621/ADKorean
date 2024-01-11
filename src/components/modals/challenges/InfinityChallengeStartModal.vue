@@ -20,29 +20,26 @@ export default {
       return this.challenge.isCompleted;
     },
     message() {
-      return `You will Big Crunch (if possible) and start a new Infinity within the Challenge with all the
-        Challenge-specific restrictions and modifiers active.
-        To complete the Challenge${this.challengeIsCompleted ? "" : " and gain its reward"},
-        you must reach the Challenge goal of
-        ${format(InfinityChallenge(this.id).goal)} Antimatter.
-        You do not start with any Dimension Boosts or Galaxies, regardless of upgrades.`;
+      return `당신은 가능하다면 빅 크런치를 실행하고 도전 내에서 각각의 조건과 함께 새로운 무한을 시작하게 됩니다.
+        이 도전을 완료하기 위해서는 도전 안에서 ${format(InfinityChallenge(this.id).goal)} 반물질에 도달해야 하며,
+        업그레이드와 상관 없이 차원 가속이나 반물질 은하를 보유하지 않은 채로 시작합니다.`;
     },
     entranceLabel() {
-      return `You are about to enter Infinity Challenge ${this.id}`;
+      return `무한 도전 ${this.id}을 시작하려 합니다.`;
     },
     reward() {
       let rewardDescription = this.challenge._config.reward.description;
       if (typeof rewardDescription === "function") {
         rewardDescription = rewardDescription();
       }
-      return `The reward for completing this challenge is: ${rewardDescription}`;
+      return `도전 완료에 따른 보상은 다음과 같습니다. : ${rewardDescription}`;
     },
     condition() {
       let conditionOfChallenge = this.challenge._config.description;
       if (typeof conditionOfChallenge === "function") {
         conditionOfChallenge = conditionOfChallenge();
       }
-      return `Inside this Infinity Challenge, ${conditionOfChallenge}`;
+      return conditionOfChallenge;
     }
   },
   created() {
@@ -78,7 +75,7 @@ export default {
       {{ reward }}
     </div>
     <template #confirm-text>
-      Begin
+      시작
     </template>
   </ModalWrapperChoice>
 </template>

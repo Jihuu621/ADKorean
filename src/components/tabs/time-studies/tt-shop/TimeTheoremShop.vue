@@ -56,12 +56,12 @@ export default {
           this.theoremGeneration.reciprocal().toNumber()).toStringShort(false)}`;
       }
       if (this.theoremGeneration.lt(0.1)) {
-        return `${format(this.theoremGeneration.times(3600), 2, 2)} TT/hour`;
+        return `${format(this.theoremGeneration.times(3600), 2, 2)} TT/시간`;
       }
-      return `${format(this.theoremGeneration, 2, 2)} TT/sec`;
+      return `${format(this.theoremGeneration, 2, 2)} TT/초`;
     },
     totalTimeTheoremText() {
-      return `${quantify("total Time Theorem", this.totalTimeTheorems, 2, 2, this.formatTimeTheoremType)}`;
+      return `${format(this.totalTimeTheorems, 2, 2)}`;
     },
     minimizeArrowStyle() {
       return {
@@ -70,7 +70,7 @@ export default {
       };
     },
     saveLoadText() {
-      return this.$viewModel.shiftDown ? "Save:" : "Load:";
+      return this.$viewModel.shiftDown ? "저장:" : "불러오기:";
     },
     shopBottomRowHeightStyle() {
       return {
@@ -155,11 +155,11 @@ export default {
         </button>
         <p class="timetheorems">
           <span class="c-tt-amount">
-            {{ quantify("Time Theorem", theoremAmount, 2, 0, formatTimeTheoremType) }}
+            {{ quantify("시간 정리", theoremAmount, 2, 0, formatTimeTheoremType) }}
           </span>
           <span v-if="showST">
             <br>
-            {{ quantifyInt("Space Theorem", STamount) }}
+            {{ quantifyInt("우주 정리", STamount) }}
           </span>
         </p>
         <div class="l-load-tree-area">
@@ -187,10 +187,10 @@ export default {
               >
             </span>
             <span v-if="showTTGen">
-              You are gaining {{ TTgenRateText }}.
+              시간 정리를 {{ TTgenRateText }}만큼 얻고 있습니다.
             </span>
             <span v-else>
-              You have {{ totalTimeTheoremText }}.
+              시간 정리를 {{ totalTimeTheoremText }}만큼 보유중입니다.
             </span>
           </div>
         </div>

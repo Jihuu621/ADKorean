@@ -25,17 +25,17 @@ export default {
         업그레이드와 상관 없이 차원 가속이나 반물질 은하를 보유하지 않은 채로 시작합니다.`;
     },
     entranceLabel() {
-      return `일반 도전 ${this.id}에 들어갑니다`;
+      return `일반 도전 ${this.id}을 시작하려 합니다.`;
     },
     reward() {
-      return `도전 완료시 보상은 다음과 같습니다. : ${this.challenge._config.reward}`;
+      return `도전 완료에 따른 보상은 다음과 같습니다. : ${this.challenge._config.reward}`;
     },
     condition() {
       let conditionOfChallenge = this.challenge._config.description;
       if (typeof conditionOfChallenge === "function") {
         conditionOfChallenge = conditionOfChallenge();
       }
-      return `${conditionOfChallenge}`;
+      return conditionOfChallenge;
     }
   },
   created() {
@@ -71,7 +71,7 @@ export default {
       {{ reward }}
     </div>
     <template #confirm-text>
-      Begin
+      시작
     </template>
   </ModalWrapperChoice>
 </template>
